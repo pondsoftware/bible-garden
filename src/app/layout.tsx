@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   description:
     "Read, search, and explore the King James Version Bible online. Browse all 66 books, 1,189 chapters, and 31,102 verses. Discover Bible verses by topic.",
   metadataBase: new URL("https://biblegarden.net"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     siteName: "Bible Garden",
