@@ -93,18 +93,14 @@ export default function RootLayout({
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold text-white mb-3">Our Tools</h3>
+                <h3 className="font-bold text-white mb-3">Popular Topics</h3>
                 <ul className="text-sm space-y-1">
-                  <li><a href="https://appliancecostcalculator.net" className="hover:text-white transition-colors">Appliance Cost Calculator</a></li>
-                  <li><a href="https://sidehustletaxcalculator.net" className="hover:text-white transition-colors">Side Hustle Tax Calculator</a></li>
-                  <li><a href="https://imageconverters.net" className="hover:text-white transition-colors">Image Format Converter</a></li>
-                  <li><a href="https://photometadata.net" className="hover:text-white transition-colors">Photo Metadata Viewer</a></li>
-                  <li><a href="https://freelancerates.net" className="hover:text-white transition-colors">Freelance Rate Calculator</a></li>
-                  <li><a href="https://imageresizers.net" className="hover:text-white transition-colors">Social Image Resizer</a></li>
-                  <li><a href="https://lendingcalculator.net" className="hover:text-white transition-colors">Lending Calculator</a></li>
-                  <li><a href="https://compoundinterestcalc.app" className="hover:text-white transition-colors">Compound Interest Calculator</a></li>
-                  <li><a href="https://salaryconverter.net" className="hover:text-white transition-colors">Salary Converter</a></li>
-                  <li><a href="https://printablepolly.com" className="hover:text-white transition-colors">Printable Polly</a></li>
+                  <li><Link href="/topics/love" className="hover:text-white transition-colors">Love</Link></li>
+                  <li><Link href="/topics/faith" className="hover:text-white transition-colors">Faith</Link></li>
+                  <li><Link href="/topics/prayer" className="hover:text-white transition-colors">Prayer</Link></li>
+                  <li><Link href="/topics/hope" className="hover:text-white transition-colors">Hope</Link></li>
+                  <li><Link href="/topics/forgiveness" className="hover:text-white transition-colors">Forgiveness</Link></li>
+                  <li><Link href="/topics/peace" className="hover:text-white transition-colors">Peace</Link></li>
                 </ul>
               </div>
             </div>
