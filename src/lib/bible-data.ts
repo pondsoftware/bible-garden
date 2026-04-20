@@ -109,7 +109,7 @@ export const BOOK_META: BookMeta[] = [
 
 const translationData: Record<Translation, Record<string, Chapter[]>> = {
   kjv: kjvData as Record<string, Chapter[]>,
-  web: webData as Record<string, Chapter[]>,
+  web: webData as unknown as Record<string, Chapter[]>,
 };
 
 function getData(translation: Translation = "kjv"): Record<string, Chapter[]> {

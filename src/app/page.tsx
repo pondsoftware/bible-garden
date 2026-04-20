@@ -74,14 +74,18 @@ export default function HomePage() {
       />
 
       {/* Hero */}
-      <section className="bg-primary text-white py-16 text-center">
-        <div className="max-w-3xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Bible Garden</h1>
-          <p className="text-xl text-green-100 mb-2">
-            Read, Search &amp; Explore the Bible
-          </p>
-          <p className="text-sm text-green-200 mb-8">
-            Available in KJV &amp; WEB translations
+      <section className="relative">
+        <div className="w-full">
+          <img
+            src="/hero.jpg"
+            alt="Bible Garden — Read, Search & Explore the Bible"
+            className="w-full h-auto block"
+            style={{ imageRendering: "pixelated" }}
+          />
+        </div>
+        <div className="bg-primary text-center py-4">
+          <p className="text-green-100 text-sm mb-3">
+            Read, Search &amp; Explore the Bible — KJV &amp; WEB translations
           </p>
           <Link
             href="/search"
@@ -90,6 +94,7 @@ export default function HomePage() {
             Search the Bible
           </Link>
         </div>
+        <h1 className="sr-only">Bible Garden — Read, Search &amp; Explore the Bible Online</h1>
       </section>
 
       {/* Popular Topics */}
