@@ -10,6 +10,9 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/favicon.svg",
+  },
   title: {
     default: "Bible Garden — Read, Search & Explore the KJV Bible Online",
     template: "%s — Bible Garden",
