@@ -77,8 +77,8 @@ export default function RootLayout({
               <div>
                 <h3 className="font-bold text-white mb-3">Bible Garden</h3>
                 <p className="text-sm text-green-200 leading-relaxed">
-                  Read, search, and explore the King James Version Bible online.
-                  All 66 books, 1,189 chapters, and 31,102 verses at your fingertips.
+                  Read, search, and explore the Bible in KJV and WEB translations.
+                  All 66 books, 1,189 chapters, and over 31,000 verses at your fingertips.
                 </p>
               </div>
               <div>
@@ -95,12 +95,15 @@ export default function RootLayout({
               <div>
                 <h3 className="font-bold text-white mb-3">Our Tools</h3>
                 <ul className="text-sm space-y-1">
-                  <li><a href="https://appliancecalculator.net" className="hover:text-white transition-colors">Appliance Calculator</a></li>
-                  <li><a href="https://freetaxcalc.com" className="hover:text-white transition-colors">Free Tax Calculator</a></li>
-                  <li><a href="https://imagequickconvert.com" className="hover:text-white transition-colors">Image Quick Convert</a></li>
-                  <li><a href="https://photometaviewer.com" className="hover:text-white transition-colors">Photo Meta Viewer</a></li>
-                  <li><a href="https://freelancecalculator.net" className="hover:text-white transition-colors">Freelance Calculator</a></li>
-                  <li><a href="https://socialresizer.com" className="hover:text-white transition-colors">Social Resizer</a></li>
+                  <li><a href="https://appliancecostcalculator.net" className="hover:text-white transition-colors">Appliance Cost Calculator</a></li>
+                  <li><a href="https://sidehustletaxcalculator.net" className="hover:text-white transition-colors">Side Hustle Tax Calculator</a></li>
+                  <li><a href="https://imageconverters.net" className="hover:text-white transition-colors">Image Format Converter</a></li>
+                  <li><a href="https://photometadata.net" className="hover:text-white transition-colors">Photo Metadata Viewer</a></li>
+                  <li><a href="https://freelancerates.net" className="hover:text-white transition-colors">Freelance Rate Calculator</a></li>
+                  <li><a href="https://imageresizers.net" className="hover:text-white transition-colors">Social Image Resizer</a></li>
+                  <li><a href="https://lendingcalculator.net" className="hover:text-white transition-colors">Lending Calculator</a></li>
+                  <li><a href="https://compoundinterestcalc.app" className="hover:text-white transition-colors">Compound Interest Calculator</a></li>
+                  <li><a href="https://salaryconverter.net" className="hover:text-white transition-colors">Salary Converter</a></li>
                   <li><a href="https://printablepolly.com" className="hover:text-white transition-colors">Printable Polly</a></li>
                 </ul>
               </div>
