@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import Link from "next/link";
 
 interface SearchResult {
@@ -68,16 +68,15 @@ export default function SearchClient() {
     return data;
   }, []);
 
-  const handleSearch = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!query.trim()) return;
+  const runSearch = useCallback(async (searchQuery: string, t: Translation) => {
+    if (!searchQuery.trim()) return;
 
     setLoading(true);
     setSearched(true);
 
     try {
-      const data = await loadBibleData(translation);
-      const lowerQuery = query.toLowerCase();
+      const data = await loadBibleData(t);
+      const lowerQuery = searchQuery.toLowerCase();
       const searchResults: SearchResult[] = [];
 
       for (const meta of BOOK_META) {
@@ -107,7 +106,20 @@ export default function SearchClient() {
     } finally {
       setLoading(false);
     }
+  }, [loadBibleData]);
+
+  const handleSearch = async (e: React.FormEvent) => {
+    e.preventDefault();
+    runSearch(query, translation);
   };
+
+  // Re-search when translation changes if a search was already performed
+  useEffect(() => {
+    if (searched && query.trim()) {
+      runSearch(query, translation);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [translation]);
 
   const highlightText = (text: string, term: string) => {
     if (!term.trim()) return text;
