@@ -75,21 +75,21 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="relative">
-        <div className="w-full">
+        <div className="max-w-3xl mx-auto px-4 pt-8">
           <img
             src="/hero.jpg"
             alt="Bible Garden — Read, Search & Explore the Bible"
-            className="w-full h-auto block"
+            className="w-full h-auto block rounded-lg shadow-lg"
             style={{ imageRendering: "pixelated" }}
           />
         </div>
-        <div className="bg-primary text-center py-4">
-          <p className="text-green-100 text-sm mb-3">
+        <div className="text-center py-6">
+          <p className="text-text-muted text-sm mb-3">
             Read, Search &amp; Explore the Bible — KJV &amp; WEB translations
           </p>
           <Link
             href="/search"
-            className="inline-block bg-white text-primary font-semibold px-8 py-3 rounded-lg hover:bg-green-50 transition-colors"
+            className="inline-block bg-primary text-white font-semibold px-8 py-3 rounded-lg hover:bg-primary-dark transition-colors"
           >
             Search the Bible
           </Link>
