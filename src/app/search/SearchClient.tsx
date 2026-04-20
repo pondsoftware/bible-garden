@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
 import Link from "next/link";
 
 interface SearchResult {
@@ -11,56 +11,62 @@ interface SearchResult {
   text: string;
 }
 
+type Translation = "kjv" | "web";
+
+const BOOK_META = [
+  { name: "Genesis", slug: "genesis" }, { name: "Exodus", slug: "exodus" },
+  { name: "Leviticus", slug: "leviticus" }, { name: "Numbers", slug: "numbers" },
+  { name: "Deuteronomy", slug: "deuteronomy" }, { name: "Joshua", slug: "joshua" },
+  { name: "Judges", slug: "judges" }, { name: "Ruth", slug: "ruth" },
+  { name: "1 Samuel", slug: "1-samuel" }, { name: "2 Samuel", slug: "2-samuel" },
+  { name: "1 Kings", slug: "1-kings" }, { name: "2 Kings", slug: "2-kings" },
+  { name: "1 Chronicles", slug: "1-chronicles" }, { name: "2 Chronicles", slug: "2-chronicles" },
+  { name: "Ezra", slug: "ezra" }, { name: "Nehemiah", slug: "nehemiah" },
+  { name: "Esther", slug: "esther" }, { name: "Job", slug: "job" },
+  { name: "Psalms", slug: "psalms" }, { name: "Proverbs", slug: "proverbs" },
+  { name: "Ecclesiastes", slug: "ecclesiastes" }, { name: "Song of Solomon", slug: "song-of-solomon" },
+  { name: "Isaiah", slug: "isaiah" }, { name: "Jeremiah", slug: "jeremiah" },
+  { name: "Lamentations", slug: "lamentations" }, { name: "Ezekiel", slug: "ezekiel" },
+  { name: "Daniel", slug: "daniel" }, { name: "Hosea", slug: "hosea" },
+  { name: "Joel", slug: "joel" }, { name: "Amos", slug: "amos" },
+  { name: "Obadiah", slug: "obadiah" }, { name: "Jonah", slug: "jonah" },
+  { name: "Micah", slug: "micah" }, { name: "Nahum", slug: "nahum" },
+  { name: "Habakkuk", slug: "habakkuk" }, { name: "Zephaniah", slug: "zephaniah" },
+  { name: "Haggai", slug: "haggai" }, { name: "Zechariah", slug: "zechariah" },
+  { name: "Malachi", slug: "malachi" }, { name: "Matthew", slug: "matthew" },
+  { name: "Mark", slug: "mark" }, { name: "Luke", slug: "luke" },
+  { name: "John", slug: "john" }, { name: "Acts", slug: "acts" },
+  { name: "Romans", slug: "romans" }, { name: "1 Corinthians", slug: "1-corinthians" },
+  { name: "2 Corinthians", slug: "2-corinthians" }, { name: "Galatians", slug: "galatians" },
+  { name: "Ephesians", slug: "ephesians" }, { name: "Philippians", slug: "philippians" },
+  { name: "Colossians", slug: "colossians" }, { name: "1 Thessalonians", slug: "1-thessalonians" },
+  { name: "2 Thessalonians", slug: "2-thessalonians" }, { name: "1 Timothy", slug: "1-timothy" },
+  { name: "2 Timothy", slug: "2-timothy" }, { name: "Titus", slug: "titus" },
+  { name: "Philemon", slug: "philemon" }, { name: "Hebrews", slug: "hebrews" },
+  { name: "James", slug: "james" }, { name: "1 Peter", slug: "1-peter" },
+  { name: "2 Peter", slug: "2-peter" }, { name: "1 John", slug: "1-john" },
+  { name: "2 John", slug: "2-john" }, { name: "3 John", slug: "3-john" },
+  { name: "Jude", slug: "jude" }, { name: "Revelation", slug: "revelation" },
+];
+
+type BibleData = Record<string, { chapter: string; verses: { verse: string; text: string }[] }[]>;
+
 export default function SearchClient() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
   const [searched, setSearched] = useState(false);
-  const [bibleData, setBibleData] = useState<Record<string, { chapter: string; verses: { verse: string; text: string }[] }[]> | null>(null);
+  const [translation, setTranslation] = useState<Translation>("kjv");
+  const dataCache = useRef<Record<Translation, BibleData | null>>({ kjv: null, web: null });
 
-  const BOOK_META = [
-    { name: "Genesis", slug: "genesis" }, { name: "Exodus", slug: "exodus" },
-    { name: "Leviticus", slug: "leviticus" }, { name: "Numbers", slug: "numbers" },
-    { name: "Deuteronomy", slug: "deuteronomy" }, { name: "Joshua", slug: "joshua" },
-    { name: "Judges", slug: "judges" }, { name: "Ruth", slug: "ruth" },
-    { name: "1 Samuel", slug: "1-samuel" }, { name: "2 Samuel", slug: "2-samuel" },
-    { name: "1 Kings", slug: "1-kings" }, { name: "2 Kings", slug: "2-kings" },
-    { name: "1 Chronicles", slug: "1-chronicles" }, { name: "2 Chronicles", slug: "2-chronicles" },
-    { name: "Ezra", slug: "ezra" }, { name: "Nehemiah", slug: "nehemiah" },
-    { name: "Esther", slug: "esther" }, { name: "Job", slug: "job" },
-    { name: "Psalms", slug: "psalms" }, { name: "Proverbs", slug: "proverbs" },
-    { name: "Ecclesiastes", slug: "ecclesiastes" }, { name: "Song of Solomon", slug: "song-of-solomon" },
-    { name: "Isaiah", slug: "isaiah" }, { name: "Jeremiah", slug: "jeremiah" },
-    { name: "Lamentations", slug: "lamentations" }, { name: "Ezekiel", slug: "ezekiel" },
-    { name: "Daniel", slug: "daniel" }, { name: "Hosea", slug: "hosea" },
-    { name: "Joel", slug: "joel" }, { name: "Amos", slug: "amos" },
-    { name: "Obadiah", slug: "obadiah" }, { name: "Jonah", slug: "jonah" },
-    { name: "Micah", slug: "micah" }, { name: "Nahum", slug: "nahum" },
-    { name: "Habakkuk", slug: "habakkuk" }, { name: "Zephaniah", slug: "zephaniah" },
-    { name: "Haggai", slug: "haggai" }, { name: "Zechariah", slug: "zechariah" },
-    { name: "Malachi", slug: "malachi" }, { name: "Matthew", slug: "matthew" },
-    { name: "Mark", slug: "mark" }, { name: "Luke", slug: "luke" },
-    { name: "John", slug: "john" }, { name: "Acts", slug: "acts" },
-    { name: "Romans", slug: "romans" }, { name: "1 Corinthians", slug: "1-corinthians" },
-    { name: "2 Corinthians", slug: "2-corinthians" }, { name: "Galatians", slug: "galatians" },
-    { name: "Ephesians", slug: "ephesians" }, { name: "Philippians", slug: "philippians" },
-    { name: "Colossians", slug: "colossians" }, { name: "1 Thessalonians", slug: "1-thessalonians" },
-    { name: "2 Thessalonians", slug: "2-thessalonians" }, { name: "1 Timothy", slug: "1-timothy" },
-    { name: "2 Timothy", slug: "2-timothy" }, { name: "Titus", slug: "titus" },
-    { name: "Philemon", slug: "philemon" }, { name: "Hebrews", slug: "hebrews" },
-    { name: "James", slug: "james" }, { name: "1 Peter", slug: "1-peter" },
-    { name: "2 Peter", slug: "2-peter" }, { name: "1 John", slug: "1-john" },
-    { name: "2 John", slug: "2-john" }, { name: "3 John", slug: "3-john" },
-    { name: "Jude", slug: "jude" }, { name: "Revelation", slug: "revelation" },
-  ];
-
-  const loadBibleData = useCallback(async () => {
-    if (bibleData) return bibleData;
-    const response = await fetch("/data/kjv.json");
+  const loadBibleData = useCallback(async (t: Translation): Promise<BibleData> => {
+    if (dataCache.current[t]) return dataCache.current[t]!;
+    const file = t === "kjv" ? "/data/kjv.json" : "/data/web.json";
+    const response = await fetch(file);
     const data = await response.json();
-    setBibleData(data);
+    dataCache.current[t] = data;
     return data;
-  }, [bibleData]);
+  }, []);
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -70,7 +76,7 @@ export default function SearchClient() {
     setSearched(true);
 
     try {
-      const data = await loadBibleData();
+      const data = await loadBibleData(translation);
       const lowerQuery = query.toLowerCase();
       const searchResults: SearchResult[] = [];
 
@@ -120,8 +126,8 @@ export default function SearchClient() {
 
   return (
     <div>
-      <form onSubmit={handleSearch} className="mb-8">
-        <div className="flex gap-2">
+      <form onSubmit={handleSearch} className="mb-6">
+        <div className="flex gap-2 mb-3">
           <input
             type="text"
             value={query}
@@ -137,11 +143,31 @@ export default function SearchClient() {
             {loading ? "Searching..." : "Search"}
           </button>
         </div>
+        <div className="flex items-center gap-2">
+          <span className="text-sm text-text-muted">Translation:</span>
+          {(["kjv", "web"] as Translation[]).map((t) => (
+            <button
+              key={t}
+              type="button"
+              onClick={() => setTranslation(t)}
+              className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
+                translation === t
+                  ? "bg-primary text-white"
+                  : "bg-warm-gray border border-warm-gray-dark text-text-muted hover:border-primary"
+              }`}
+            >
+              {t.toUpperCase()}
+            </button>
+          ))}
+          <span className="text-xs text-text-muted ml-1">
+            {translation === "kjv" ? "King James Version" : "World English Bible"}
+          </span>
+        </div>
       </form>
 
       {loading && (
         <div className="text-center py-8 text-text-muted">
-          <p>Searching 31,102 verses...</p>
+          <p>Searching {translation === "kjv" ? "31,102" : "31,095"} verses...</p>
         </div>
       )}
 
@@ -151,8 +177,8 @@ export default function SearchClient() {
             {results.length === 0
               ? "No results found."
               : results.length >= 100
-                ? "Showing first 100 results."
-                : `Found ${results.length} result${results.length === 1 ? "" : "s"}.`}
+                ? `Showing first 100 results (${translation.toUpperCase()}).`
+                : `Found ${results.length} result${results.length === 1 ? "" : "s"} (${translation.toUpperCase()}).`}
           </p>
 
           <div className="space-y-4">

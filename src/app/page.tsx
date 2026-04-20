@@ -12,27 +12,27 @@ export default function HomePage() {
     {
       question: "What is Bible Garden?",
       answer:
-        "Bible Garden is a free online Bible reading tool featuring the complete King James Version (KJV) text. You can read all 66 books, search for specific verses or topics, and explore curated collections of verses organized by theme.",
+        "Bible Garden is a free online Bible reading tool featuring the King James Version (KJV) and World English Bible (WEB). You can read all 66 books, search for specific verses or topics, switch between translations, and explore curated collections of verses organized by theme.",
     },
     {
       question: "How many books are in the Bible?",
       answer:
-        "The Bible contains 66 books — 39 in the Old Testament and 27 in the New Testament. Together they contain 1,189 chapters and 31,102 verses.",
+        "The Bible contains 66 books — 39 in the Old Testament and 27 in the New Testament. Together they contain 1,189 chapters and over 31,000 verses.",
     },
     {
-      question: "What Bible version does Bible Garden use?",
+      question: "What Bible translations does Bible Garden offer?",
       answer:
-        "Bible Garden uses the King James Version (KJV), first published in 1611. The KJV is in the public domain and remains one of the most widely read and quoted English translations of the Bible.",
+        "Bible Garden offers two public domain translations: the King James Version (KJV), first published in 1611 and one of the most widely quoted English translations, and the World English Bible (WEB), a modern English translation that is easy to read and understand. You can switch between translations on any chapter or topic page.",
     },
     {
       question: "Can I search for Bible verses by topic?",
       answer:
-        "Yes! Bible Garden offers over 50 curated topic pages covering subjects like love, faith, prayer, forgiveness, hope, anxiety, and many more. Each topic page contains carefully selected verses with their full text.",
+        "Yes! Bible Garden offers over 50 curated topic pages covering subjects like love, faith, prayer, forgiveness, hope, anxiety, and many more. Each topic page contains carefully selected verses with their full text in both KJV and WEB.",
     },
     {
       question: "Is Bible Garden free to use?",
       answer:
-        "Yes, Bible Garden is completely free. You can read, search, and explore the entire KJV Bible without any cost, registration, or subscription.",
+        "Yes, Bible Garden is completely free. You can read, search, and explore the Bible in both KJV and WEB without any cost, registration, or subscription.",
     },
   ];
 
@@ -77,8 +77,11 @@ export default function HomePage() {
       <section className="bg-primary text-white py-16 text-center">
         <div className="max-w-3xl mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Bible Garden</h1>
-          <p className="text-xl text-green-100 mb-8">
+          <p className="text-xl text-green-100 mb-2">
             Read, Search &amp; Explore the Bible
+          </p>
+          <p className="text-sm text-green-200 mb-8">
+            Available in KJV &amp; WEB translations
           </p>
           <Link
             href="/search"

@@ -1,4 +1,12 @@
 import kjvData from "../../data/kjv.json";
+import webData from "../../data/web.json";
+
+export type Translation = "kjv" | "web";
+
+export const TRANSLATIONS: { id: Translation; name: string; fullName: string }[] = [
+  { id: "kjv", name: "KJV", fullName: "King James Version" },
+  { id: "web", name: "WEB", fullName: "World English Bible" },
+];
 
 export interface Verse {
   verse: string;
@@ -99,7 +107,14 @@ export const BOOK_META: BookMeta[] = [
   { name: "Revelation", slug: "revelation", testament: "NT", abbreviation: "Rev" },
 ];
 
-const data = kjvData as Record<string, Chapter[]>;
+const translationData: Record<Translation, Record<string, Chapter[]>> = {
+  kjv: kjvData as Record<string, Chapter[]>,
+  web: webData as Record<string, Chapter[]>,
+};
+
+function getData(translation: Translation = "kjv"): Record<string, Chapter[]> {
+  return translationData[translation];
+}
 
 const slugToName: Record<string, string> = {};
 const nameToSlug: Record<string, string> = {};
@@ -108,16 +123,18 @@ BOOK_META.forEach((b) => {
   nameToSlug[b.name] = b.slug;
 });
 
-export function getBooks(): (BookMeta & { chapterCount: number })[] {
+export function getBooks(translation: Translation = "kjv"): (BookMeta & { chapterCount: number })[] {
+  const data = getData(translation);
   return BOOK_META.map((meta) => ({
     ...meta,
     chapterCount: data[meta.name]?.length ?? 0,
   }));
 }
 
-export function getBook(slug: string): BookData | null {
+export function getBook(slug: string, translation: Translation = "kjv"): BookData | null {
   const name = slugToName[slug];
   if (!name) return null;
+  const data = getData(translation);
   const chapters = data[name];
   if (!chapters) return null;
   const meta = BOOK_META.find((b) => b.slug === slug)!;
@@ -128,9 +145,10 @@ export function getBook(slug: string): BookData | null {
   };
 }
 
-export function getChapter(bookSlug: string, chapterNum: number): { book: BookMeta; chapter: Chapter; totalChapters: number } | null {
+export function getChapter(bookSlug: string, chapterNum: number, translation: Translation = "kjv"): { book: BookMeta; chapter: Chapter; totalChapters: number } | null {
   const name = slugToName[bookSlug];
   if (!name) return null;
+  const data = getData(translation);
   const chapters = data[name];
   if (!chapters) return null;
   const chapter = chapters.find((c) => c.chapter === String(chapterNum));
@@ -139,16 +157,17 @@ export function getChapter(bookSlug: string, chapterNum: number): { book: BookMe
   return { book: meta, chapter, totalChapters: chapters.length };
 }
 
-export function getVerse(bookSlug: string, chapterNum: number, verseNum: number): string | null {
-  const result = getChapter(bookSlug, chapterNum);
+export function getVerse(bookSlug: string, chapterNum: number, verseNum: number, translation: Translation = "kjv"): string | null {
+  const result = getChapter(bookSlug, chapterNum, translation);
   if (!result) return null;
   const verse = result.chapter.verses.find((v) => v.verse === String(verseNum));
   return verse?.text ?? null;
 }
 
-export function searchVerses(query: string, limit = 100): SearchResult[] {
+export function searchVerses(query: string, limit = 100, translation: Translation = "kjv"): SearchResult[] {
   const results: SearchResult[] = [];
   const lowerQuery = query.toLowerCase();
+  const data = getData(translation);
 
   for (const meta of BOOK_META) {
     const chapters = data[meta.name];

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getBooks, getBook, getChapter, BOOK_META } from "@/lib/bible-data";
+import ChapterContent from "@/components/ChapterContent";
 
 export function generateStaticParams() {
   const params: { book: string; chapter: string }[] = [];
@@ -25,11 +26,11 @@ export async function generateMetadata({
 
   const { book } = result;
   return {
-    title: `${book.name} Chapter ${chapterNum} (KJV)`,
-    description: `Read ${book.name} Chapter ${chapterNum} from the King James Version Bible online. Full text with verse numbers.`,
+    title: `${book.name} Chapter ${chapterNum} — KJV & WEB Bible Text`,
+    description: `Read ${book.name} Chapter ${chapterNum} in the King James Version (KJV) and World English Bible (WEB). Full text with verse numbers.`,
     openGraph: {
-      title: `${book.name} Chapter ${chapterNum} (KJV) — Bible Garden`,
-      description: `Read ${book.name} ${chapterNum} in the King James Version.`,
+      title: `${book.name} Chapter ${chapterNum} — Bible Garden`,
+      description: `Read ${book.name} ${chapterNum} in KJV and WEB translations.`,
     },
   };
 }
@@ -55,6 +56,11 @@ export default async function ChapterPage({
   }
 
   const { book, chapter, totalChapters } = result;
+
+  // Get WEB verses for translation switcher
+  const webResult = getChapter(bookSlug, chapterNum, "web");
+  const webVerses = webResult?.chapter.verses ?? [];
+
   const bookIndex = BOOK_META.findIndex((b) => b.slug === bookSlug);
 
   // Determine prev/next chapter
@@ -132,20 +138,13 @@ export default async function ChapterPage({
           <span className="text-text">Chapter {chapterNum}</span>
         </nav>
 
-        {/* Chapter Header */}
-        <h1 className="text-3xl font-bold text-primary mb-8">
-          {book.name} {chapterNum}
-        </h1>
-
-        {/* Verse Text */}
-        <div className="verse-text leading-relaxed mb-10">
-          {chapter.verses.map((v) => (
-            <span key={v.verse} className="inline">
-              <span className="verse-num">{v.verse}</span>
-              {v.text}{" "}
-            </span>
-          ))}
-        </div>
+        {/* Chapter Content with Translation Switcher */}
+        <ChapterContent
+          kjvVerses={chapter.verses}
+          webVerses={webVerses}
+          bookName={book.name}
+          chapterNum={chapterNum}
+        />
 
         {/* Chapter Navigation */}
         <div className="flex justify-between items-center border-t border-warm-gray-dark pt-6">

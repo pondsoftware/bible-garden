@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { TOPICS, getTopic } from "@/lib/topics-data";
 import { getVerse, getBookSlug } from "@/lib/bible-data";
+import TopicVerses from "@/components/TopicVerses";
 
 export function generateStaticParams() {
   return TOPICS.map((topic) => ({ topic: topic.slug }));
@@ -45,14 +46,16 @@ export default async function TopicPage({
     );
   }
 
-  // Resolve verse texts
+  // Resolve verse texts for both translations
   const versesWithText = topic.verses.map((ref) => {
     const slug = getBookSlug(ref.book);
-    const text = getVerse(slug, ref.chapter, ref.verse);
+    const kjvText = getVerse(slug, ref.chapter, ref.verse, "kjv");
+    const webText = getVerse(slug, ref.chapter, ref.verse, "web");
     return {
       ...ref,
       slug,
-      text: text || "",
+      kjvText: kjvText || "",
+      webText: webText || "",
       reference: `${ref.book} ${ref.chapter}:${ref.verse}`,
     };
   });
@@ -62,7 +65,8 @@ export default async function TopicPage({
     reference: string;
     slug: string;
     chapter: number;
-    texts: { verse: number; text: string }[];
+    kjvTexts: { verse: number; text: string }[];
+    webTexts: { verse: number; text: string }[];
   }[] = [];
 
   for (const v of versesWithText) {
@@ -71,17 +75,19 @@ export default async function TopicPage({
       last &&
       last.slug === v.slug &&
       last.chapter === v.chapter &&
-      v.verse === last.texts[last.texts.length - 1].verse + 1
+      v.verse === last.kjvTexts[last.kjvTexts.length - 1].verse + 1
     ) {
-      last.texts.push({ verse: v.verse, text: v.text });
+      last.kjvTexts.push({ verse: v.verse, text: v.kjvText });
+      last.webTexts.push({ verse: v.verse, text: v.webText });
       // Update reference range
-      last.reference = `${v.book} ${last.chapter}:${last.texts[0].verse}-${v.verse}`;
+      last.reference = `${v.book} ${last.chapter}:${last.kjvTexts[0].verse}-${v.verse}`;
     } else {
       groupedVerses.push({
         reference: v.reference,
         slug: v.slug,
         chapter: v.chapter,
-        texts: [{ verse: v.verse, text: v.text }],
+        kjvTexts: [{ verse: v.verse, text: v.kjvText }],
+        webTexts: [{ verse: v.verse, text: v.webText }],
       });
     }
   }
@@ -156,30 +162,8 @@ export default async function TopicPage({
         </h1>
         <p className="text-text-muted mb-8 leading-relaxed">{topic.description}</p>
 
-        {/* Verses */}
-        <div className="space-y-6 mb-12">
-          {groupedVerses.map((group, i) => (
-            <div
-              key={i}
-              className="bg-white border border-warm-gray-dark rounded-lg p-5"
-            >
-              <div className="verse-text mb-3">
-                {group.texts.map((t) => (
-                  <span key={t.verse} className="inline">
-                    <span className="verse-num">{t.verse}</span>
-                    {t.text}{" "}
-                  </span>
-                ))}
-              </div>
-              <Link
-                href={`/${group.slug}/${group.chapter}`}
-                className="text-sm font-medium text-primary hover:underline"
-              >
-                {group.reference}
-              </Link>
-            </div>
-          ))}
-        </div>
+        {/* Verses with Translation Switcher */}
+        <TopicVerses groups={groupedVerses} />
 
         {/* Related Topics */}
         {relatedTopics.length > 0 && (
