@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-primary: #2d5016;
+  --color-primary-light: #3a6b1e;
+  --color-primary-dark: #1e3a0e;
+  --color-accent: #8b6914;
+  --color-cream: #faf8f0;
+  --color-warm-gray: #f5f0e8;
+  --color-warm-gray-dark: #e8e0d0;
+  --color-text: #2c2c2c;
+  --color-text-muted: #6b6b6b;
+  --color-verse-num: #8b7355;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  background: var(--color-cream);
+  color: var(--color-text);
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.verse-text {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.125rem;
+  line-height: 1.9;
+}
+
+.verse-num {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.7em;
+  color: var(--color-verse-num);
+  vertical-align: super;
+  margin-right: 2px;
+  font-weight: 600;
+}
+
+.search-highlight {
+  background-color: #fde68a;
+  padding: 1px 2px;
+  border-radius: 2px;
 }
