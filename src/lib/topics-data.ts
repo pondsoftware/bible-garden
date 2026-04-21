@@ -48,6 +48,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about faith?", answer: "The Bible defines faith as 'the substance of things hoped for, the evidence of things not seen' (Hebrews 11:1). It teaches that faith is essential for pleasing God and is a gift of grace through which believers are saved." },
       { question: "How can I grow my faith according to the Bible?", answer: "Romans 10:17 teaches that faith comes by hearing the word of God. Growing in faith involves reading Scripture, prayer, fellowship with other believers, and trusting God through trials." },
+      { question: "What is the relationship between faith and works?", answer: "James 2:17 says 'faith, if it hath not works, is dead.' While Ephesians 2:8-9 teaches salvation is by grace through faith and not by works, James emphasizes that genuine faith naturally produces good works as evidence. The two are complementary: faith is the root, and works are the fruit." },
     ],
   },
   {
@@ -73,6 +74,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about prayer?", answer: "The Bible encourages believers to pray without ceasing (1 Thessalonians 5:17), to bring all concerns to God with thanksgiving (Philippians 4:6), and assures that God hears the prayers of the righteous." },
       { question: "How should Christians pray according to Scripture?", answer: "Jesus taught his disciples to pray privately (Matthew 6:6), with faith (Mark 11:24), and according to God's will (1 John 5:14). He also taught them the Lord's Prayer as a model." },
+      { question: "Does God always answer prayer?", answer: "The Bible teaches that God always hears prayer (1 John 5:14) but may answer differently than expected. He may say yes, no, or wait. Jesus Himself prayed 'not my will, but thine, be done' (Luke 22:42). Romans 8:26 says the Spirit helps us pray when we don't know what to ask for." },
     ],
   },
   {
@@ -98,6 +100,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about salvation?", answer: "The Bible teaches that salvation is a gift from God received through faith in Jesus Christ (Ephesians 2:8). It declares that all have sinned (Romans 3:23), but God offers forgiveness and eternal life to those who believe." },
       { question: "How is a person saved according to the Bible?", answer: "Romans 10:9 states that confessing Jesus as Lord and believing God raised Him from the dead leads to salvation. It is by grace through faith, not by works (Ephesians 2:8-9)." },
+      { question: "Can a person lose their salvation?", answer: "Christians disagree on this. Those holding 'eternal security' cite John 10:28 ('no man is able to pluck them out of my Father's hand') and Romans 8:38-39. Others point to warnings in Hebrews 6:4-6 and 2 Peter 2:20-22 as evidence that falling away is possible. Both sides agree that genuine faith produces perseverance and holy living." },
     ],
   },
   {
@@ -123,6 +126,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What is grace in the Bible?", answer: "Grace is God's unmerited favor — His kindness toward people who don't deserve it. Ephesians 2:8 says salvation comes by grace through faith, meaning it is a gift, not earned through human effort." },
       { question: "What Bible verses talk about God's grace?", answer: "Key grace verses include Ephesians 2:8-9, 2 Corinthians 12:9 ('My grace is sufficient for thee'), Romans 5:8, and Titus 2:11 which says grace has appeared to all men." },
+      { question: "What is the difference between grace and mercy?", answer: "Grace is receiving what we do not deserve (God's blessing and salvation), while mercy is not receiving what we do deserve (punishment for sin). Both flow from God's love. Hebrews 4:16 invites believers to come boldly to the throne of grace to obtain mercy and find grace to help in time of need." },
     ],
   },
   {
@@ -148,6 +152,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about the Holy Spirit?", answer: "The Bible teaches that the Holy Spirit is the third person of the Trinity who indwells believers (1 Corinthians 6:19), guides them into truth (John 16:13), and empowers them for service (Acts 1:8)." },
       { question: "What are the fruits of the Holy Spirit?", answer: "Galatians 5:22-23 lists the fruit of the Spirit: love, joy, peace, longsuffering, gentleness, goodness, faith, meekness, and temperance." },
+      { question: "What are the gifts of the Holy Spirit?", answer: "The Bible lists spiritual gifts in several passages: 1 Corinthians 12 mentions wisdom, knowledge, faith, healing, miracles, prophecy, discernment, tongues, and interpretation. Romans 12 adds teaching, serving, encouraging, giving, and leading. Ephesians 4 includes apostles, prophets, evangelists, pastors, and teachers. Christians debate which gifts continue today." },
     ],
   },
   {
@@ -173,6 +178,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about worship?", answer: "Jesus said God must be worshipped 'in spirit and in truth' (John 4:24). The Bible teaches that worship involves praise, prayer, song, giving, and living a life devoted to God (Romans 12:1)." },
       { question: "Why is worship important in Christianity?", answer: "Worship acknowledges God's worthiness and sovereignty. The Psalms repeatedly call believers to praise God. Revelation 4:11 says God is worthy because He created all things." },
+      { question: "Is worship only about singing?", answer: "No — while singing is part of worship (Colossians 3:16, Psalms 96:1), the Bible presents worship as encompassing all of life. Romans 12:1 says presenting your body as a living sacrifice is 'reasonable service.' Worship includes prayer, giving, service to others, obedience, and doing all things to the glory of God (1 Corinthians 10:31)." },
     ],
   },
   {
@@ -198,6 +204,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What is repentance according to the Bible?", answer: "Repentance means a genuine change of heart and mind that leads to turning away from sin and toward God. Acts 3:19 calls believers to 'repent and be converted, that your sins may be blotted out.'" },
       { question: "Why does God call us to repent?", answer: "God desires that none perish (2 Peter 3:9) and calls all to repentance out of His goodness and love (Romans 2:4). Jesus began His ministry proclaiming 'Repent: for the kingdom of heaven is at hand' (Mark 1:15)." },
+      { question: "Is repentance a one-time event or ongoing?", answer: "While initial repentance marks conversion, the Bible presents repentance as an ongoing posture for believers. Revelation 3:19 tells the church to be zealous and repent. 1 John 1:9 promises ongoing forgiveness as we confess sins. Sanctification involves continually turning from sin toward God throughout the Christian life." },
     ],
   },
   {
@@ -223,6 +230,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about baptism?", answer: "The Bible presents baptism as an outward expression of an inward faith. Jesus commanded His followers to baptize in Matthew 28:19, and Acts 2:38 connects it with repentance and the forgiveness of sins." },
       { question: "Is baptism necessary for salvation?", answer: "Christians have varying views on this. Mark 16:16 and Acts 2:38 link baptism with salvation, while Ephesians 2:8-9 emphasizes salvation by grace through faith. Most agree baptism is an act of obedience following conversion." },
+      { question: "Should infants be baptized or only believers?", answer: "Christians hold two main positions. Paedobaptists (Catholics, Presbyterians, Lutherans) baptize infants as a sign of the covenant community, similar to circumcision. Credobaptists (Baptists, Pentecostals) practice believer's baptism only, arguing that faith must precede baptism based on passages like Acts 8:36-38. Both traditions have long historical roots." },
     ],
   },
   {
@@ -248,6 +256,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say heaven is like?", answer: "Revelation 21:4 says there will be no death, sorrow, crying, or pain. Jesus said He prepares a place for believers (John 14:2-3). It is described as a place of glory, light, and God's presence." },
       { question: "Who goes to heaven according to the Bible?", answer: "The Bible teaches that heaven is for those who put their faith in Jesus Christ. John 14:6 says Jesus is 'the way, the truth, and the life' and no one comes to the Father except through Him." },
+      { question: "Will heaven be on earth or somewhere else?", answer: "Revelation 21:1 describes 'a new heaven and a new earth,' suggesting the final dwelling of believers will be a renewed, physical creation rather than a purely spiritual realm. Isaiah 65:17 also prophesies a new heavens and new earth. Many theologians see the ultimate hope as God dwelling with humanity on a restored earth." },
     ],
   },
   {
@@ -273,6 +282,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about eternal life?", answer: "John 3:16 declares that whoever believes in God's Son shall not perish but have everlasting life. Eternal life is described as knowing God and Jesus Christ (John 17:3) and is a gift, not earned (Romans 6:23)." },
       { question: "Can a person have assurance of eternal life?", answer: "1 John 5:13 says these things are written 'that ye may know that ye have eternal life.' John 10:28 promises that believers shall never perish and no one can pluck them from God's hand." },
+      { question: "Does eternal life begin after death or now?", answer: "Jesus defined eternal life as knowing God and His Son (John 17:3), suggesting it begins the moment a person believes. John 5:24 says the believer 'hath everlasting life, and shall not come into condemnation; but is passed from death unto life.' Eternal life is both a present reality and a future hope." },
     ],
   },
   {
@@ -298,6 +308,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "How does the Bible describe God's love?", answer: "Romans 5:8 says God demonstrated His love by sending Christ to die while we were still sinners. 1 John 4:8 declares 'God is love.' His love is described as everlasting (Jeremiah 31:3) and inseparable from believers (Romans 8:38-39)." },
       { question: "What is the greatest expression of God's love?", answer: "John 3:16 says God 'so loved the world, that he gave his only begotten Son' — the sacrifice of Jesus Christ is presented as the supreme demonstration of divine love." },
+      { question: "Is God's love unconditional?", answer: "The Bible presents God's love as initiating and undeserved — Romans 5:8 says He loved us while we were still sinners. However, Scripture also speaks of God's displeasure with sin and His discipline of His children (Hebrews 12:6). God's love is unconditional in its initiative but relational in its fullness, inviting human response." },
     ],
   },
   {
@@ -323,6 +334,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about trusting God?", answer: "Proverbs 3:5-6 instructs believers to 'trust in the LORD with all thine heart; and lean not unto thine own understanding.' The Bible promises that those who trust God will find peace (Isaiah 26:3) and strength." },
       { question: "How can I trust God during difficult times?", answer: "Psalm 56:3 says 'What time I am afraid, I will trust in thee.' Scripture encourages believers to remember God's faithfulness, rely on His promises, and cast their cares upon Him (1 Peter 5:7)." },
+      { question: "What is the difference between trusting God and being passive?", answer: "Biblical trust is not passivity — Proverbs 3:5-6 says to acknowledge God 'in all thy ways,' implying active engagement. Nehemiah both prayed and posted guards (Nehemiah 4:9). Trust means acting wisely while depending on God for outcomes, not sitting idle and expecting miracles without responsibility." },
     ],
   },
   {
@@ -348,6 +360,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "How does a Christian grow spiritually?", answer: "The Bible teaches spiritual growth comes through Scripture study (2 Timothy 3:16), prayer, fellowship, obedience, and the work of the Holy Spirit. 1 Peter 2:2 says to 'desire the sincere milk of the word, that ye may grow thereby.'" },
       { question: "What does spiritual maturity look like biblically?", answer: "Hebrews 5:14 describes the mature as those trained to discern good and evil. The fruit of the Spirit (Galatians 5:22-23) and being transformed by renewing the mind (Romans 12:2) are marks of growth." },
+      { question: "Why do some Christians seem to stop growing?", answer: "Hebrews 5:12 rebukes those who should be teachers but still need milk. Spiritual stagnation can come from neglecting Scripture, unconfessed sin, isolation from fellowship, or comfort with the status quo. James 1:22 warns against hearing the word without doing it, which leads to self-deception rather than growth." },
     ],
   },
 
@@ -378,6 +391,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about love?", answer: "The Bible describes love as patient, kind, not envious, not boastful (1 Corinthians 13:4-7). It says God is love (1 John 4:8) and the greatest commandment is to love God and love others (Matthew 22:37-39)." },
       { question: "What is the most famous Bible verse about love?", answer: "John 3:16 is widely considered the most famous verse about love: 'For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.'" },
+      { question: "What are the different types of love in the Bible?", answer: "The Greek New Testament uses several words for love: agape (selfless, unconditional love), phileo (brotherly affection), storge (family love), and eros (romantic love). Agape is the highest form — the love God demonstrates and commands Christians to show. 1 Corinthians 13 describes this self-giving love in detail." },
     ],
   },
   {
@@ -403,6 +417,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about hope?", answer: "Romans 15:13 calls God 'the God of hope' who fills believers with joy and peace. Jeremiah 29:11 promises plans for a future and hope. Biblical hope is confident expectation grounded in God's character." },
       { question: "How can I find hope when life is hard?", answer: "Isaiah 40:31 promises that those who wait upon the Lord shall renew their strength. Lamentations 3:24 declares the Lord is our portion, therefore we will hope in Him. Hope comes from trusting God's promises." },
+      { question: "How is biblical hope different from wishful thinking?", answer: "Biblical hope is not uncertain wishfulness but confident assurance based on God's character and promises. Hebrews 6:19 calls hope 'an anchor of the soul, both sure and steadfast.' It is grounded in the resurrection of Christ (1 Peter 1:3), making it a certainty that sustains believers through any trial." },
     ],
   },
   {
@@ -428,6 +443,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about peace?", answer: "Jesus said 'Peace I leave with you, my peace I give unto you' (John 14:27). The Bible promises a peace that surpasses understanding (Philippians 4:7) and calls believers to pursue peace with others." },
       { question: "How can I have peace according to the Bible?", answer: "Isaiah 26:3 says God keeps in perfect peace those whose minds are stayed on Him. Peace comes through faith (Romans 5:1), prayer (Philippians 4:6-7), and trusting God's sovereignty." },
+      { question: "What is the difference between peace with God and the peace of God?", answer: "Peace with God (Romans 5:1) is the objective state of reconciliation that comes through justification by faith — we are no longer God's enemies. The peace of God (Philippians 4:7) is the subjective experience of inner calm that guards our hearts and minds. The first is positional and settled; the second is experiential and grows through prayer and trust." },
     ],
   },
   {
@@ -453,6 +469,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about joy?", answer: "The Bible distinguishes joy from happiness — joy is a fruit of the Spirit (Galatians 5:22) that persists regardless of circumstances. Nehemiah 8:10 says 'the joy of the LORD is your strength.'" },
       { question: "How can Christians be joyful during trials?", answer: "James 1:2 says to 'count it all joy when ye fall into divers temptations' because testing produces patience. Joy comes from relationship with God, not from circumstances (Habakkuk 3:18)." },
+      { question: "What is the difference between joy and happiness?", answer: "Happiness is often tied to circumstances — the root word means 'happenstance.' Biblical joy is rooted in God's unchanging nature and promises, making it possible even during suffering. Paul wrote Philippians, the Bible's most joyful letter, from prison. Joy is a choice and a fruit of the Spirit, not dependent on external conditions." },
     ],
   },
   {
@@ -478,6 +495,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible teach about patience?", answer: "The Bible teaches that patience (longsuffering) is a fruit of the Spirit (Galatians 5:22). James 1:3-4 says the testing of faith produces patience, and patience leads to spiritual completeness." },
       { question: "How can I develop more patience according to Scripture?", answer: "Patience develops through trials (Romans 5:3-4), by waiting on God (Psalm 37:7), and through the power of the Holy Spirit. Hebrews 10:36 reminds us that patience is needed to receive God's promises." },
+      { question: "What is the difference between patience and passivity?", answer: "Biblical patience is active endurance, not resignation. It means persevering with hope, like a farmer waiting for harvest (James 5:7). Galatians 6:9 says to not grow weary in well-doing while being patient. Patience trusts God's timing while continuing faithful action — it is strength under control, not inaction." },
     ],
   },
   {
@@ -503,6 +521,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about courage?", answer: "God repeatedly tells His people to 'be strong and of a good courage' (Joshua 1:9). Biblical courage is not the absence of fear but confidence in God's presence. 2 Timothy 1:7 says God gives a spirit of power, not fear." },
       { question: "Where does courage come from according to Scripture?", answer: "Courage comes from knowing God is with us (Deuteronomy 31:6), trusting His power (Isaiah 41:10), and knowing He is our light and salvation (Psalm 27:1). It is faith applied to fearful situations." },
+      { question: "Who are examples of courage in the Bible?", answer: "David faced Goliath trusting God's deliverance (1 Samuel 17). Esther risked her life to save her people (Esther 4:16). Daniel faced the lion's den rather than stop praying (Daniel 6). The apostles preached boldly despite threats (Acts 4:29-31). Each demonstrated courage not from self-confidence but from confidence in God." },
     ],
   },
   {
@@ -528,6 +547,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about strength?", answer: "The Bible teaches that true strength comes from God. Philippians 4:13 says 'I can do all things through Christ which strengtheneth me.' Isaiah 40:31 promises renewed strength for those who wait upon the Lord." },
       { question: "How can I find strength in difficult times?", answer: "2 Corinthians 12:9 says God's strength is made perfect in weakness. Psalm 46:1 declares God is 'a very present help in trouble.' Believers find strength through prayer, Scripture, and reliance on God." },
+      { question: "Does God's strength mean we will never feel weak?", answer: "No — Paul said he boasted in his weaknesses so that Christ's power would rest on him (2 Corinthians 12:9-10). God's strength often works through human weakness, not by removing it. This paradox means that acknowledging our inability is often the path to experiencing God's enabling power." },
     ],
   },
   {
@@ -553,6 +573,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about comfort?", answer: "2 Corinthians 1:3-4 calls God 'the God of all comfort, who comforteth us in all our tribulation.' Jesus promised the Holy Spirit as a Comforter (John 14:16). God is near to the brokenhearted (Psalm 34:18)." },
       { question: "Where can I find comfort in the Bible?", answer: "Psalm 23 is the most beloved comfort passage. Matthew 5:4 promises 'Blessed are they that mourn: for they shall be comforted.' Romans 8:28 assures that God works all things for good." },
+      { question: "How can we comfort others according to Scripture?", answer: "2 Corinthians 1:4 says God comforts us so that we can comfort others with the same comfort we received. Romans 12:15 instructs us to weep with those who weep. Sometimes comfort comes through presence, not words — Job's friends were most helpful during their initial seven days of silent companionship (Job 2:13)." },
     ],
   },
   {
@@ -578,6 +599,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about gratitude?", answer: "1 Thessalonians 5:18 says 'In every thing give thanks: for this is the will of God.' The Psalms overflow with thanksgiving to God. Gratitude is both a command and a response to God's goodness." },
       { question: "Why is thankfulness important in Christianity?", answer: "Thankfulness shifts focus from problems to God's provision. Colossians 3:17 says to do everything with thanks. A grateful heart acknowledges God as the source of every good gift (James 1:17)." },
+      { question: "How can I be thankful during difficult circumstances?", answer: "1 Thessalonians 5:18 says to give thanks 'in' everything, not necessarily 'for' everything. Habakkuk 3:17-18 models praising God even when everything goes wrong. Gratitude in hardship is possible when focused on God's unchanging character, past faithfulness, and eternal promises rather than temporary circumstances." },
     ],
   },
   {
@@ -603,6 +625,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about humility?", answer: "The Bible presents humility as essential. Philippians 2:3 says to esteem others better than yourself. James 4:10 promises that those who humble themselves before God will be lifted up." },
       { question: "Why is humility important to God?", answer: "Micah 6:8 lists walking humbly with God as one of His requirements. Proverbs 11:2 says 'with the lowly is wisdom.' Jesus modeled humility and taught that the greatest must be the servant of all." },
+      { question: "How did Jesus demonstrate humility?", answer: "Philippians 2:5-8 describes Jesus leaving heaven's glory, taking the form of a servant, and humbling Himself to death on a cross. He washed His disciples' feet (John 13:14-15), associated with the lowly, and said He came not to be served but to serve (Mark 10:45). His entire life modeled the humility He taught." },
     ],
   },
   {
@@ -628,6 +651,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about wisdom?", answer: "Proverbs 1:7 says 'The fear of the LORD is the beginning of knowledge.' James 1:5 promises that God gives wisdom generously to those who ask. True wisdom begins with reverence for God." },
       { question: "How can I gain wisdom according to the Bible?", answer: "Ask God (James 1:5), fear the Lord (Proverbs 9:10), study Scripture (2 Timothy 3:15-16), and seek counsel from the wise (Proverbs 13:20). Wisdom is more valuable than gold (Proverbs 16:16)." },
+      { question: "What is the difference between wisdom and knowledge?", answer: "Knowledge is the accumulation of facts and information, while wisdom is the ability to apply truth rightly in life situations. James 3:17 says godly wisdom is 'pure, then peaceable, gentle, and easy to be intreated, full of mercy and good fruits.' Knowledge puffs up (1 Corinthians 8:1) but wisdom builds up others and honors God." },
     ],
   },
   {
@@ -653,6 +677,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about kindness?", answer: "Ephesians 4:32 says 'be ye kind one to another, tenderhearted, forgiving one another.' Kindness is listed as a fruit of the Spirit (Galatians 5:22) and is described as a quality of true love (1 Corinthians 13:4)." },
       { question: "Why does God value kindness?", answer: "Romans 2:4 says God's kindness leads to repentance — He models kindness for us. Micah 6:8 lists loving kindness as one of three things God requires. Even small acts of kindness reflect God's character." },
+      { question: "How should Christians show kindness to difficult people?", answer: "Jesus taught loving enemies and doing good to those who hate you (Luke 6:27-35). Proverbs 25:21-22 says feeding your enemy heaps 'coals of fire on his head.' Kindness toward the difficult is not weakness but supernatural strength, enabled by the Holy Spirit's fruit working in believers' lives." },
     ],
   },
   {
@@ -678,6 +703,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about forgiveness?", answer: "Jesus taught that we must forgive others to receive God's forgiveness (Matthew 6:14-15). 1 John 1:9 promises that God is faithful to forgive sins when we confess them. Forgiveness is a central teaching of Christianity." },
       { question: "How many times should I forgive someone?", answer: "Jesus told Peter to forgive 'seventy times seven' (Matthew 18:22), meaning without limit. Colossians 3:13 says to forgive as Christ forgave us. Biblical forgiveness is not optional for believers." },
+      { question: "Does forgiveness mean forgetting or removing consequences?", answer: "Forgiveness does not require pretending the offense never happened or eliminating all consequences. God forgave David's sin with Bathsheba but consequences remained (2 Samuel 12:13-14). Forgiveness releases bitterness and the desire for personal revenge, while still allowing appropriate boundaries and justice. It is primarily about freeing the forgiver's heart." },
     ],
   },
   {
@@ -703,6 +729,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about compassion?", answer: "The Bible describes God as 'full of compassion' (Psalm 86:15) and commands believers to put on 'bowels of mercies, kindness, humbleness of mind' (Colossians 3:12). Jesus was moved with compassion toward the crowds (Matthew 9:36)." },
       { question: "How should Christians show compassion?", answer: "1 Peter 3:8 says to have compassion one of another. Zechariah 7:9 commands showing mercy and compassion to others. Christians demonstrate compassion through acts of service, mercy, and caring for the needy." },
+      { question: "What is the connection between compassion and action?", answer: "Biblical compassion always moves toward action. When Jesus felt compassion, He healed, taught, and fed people (Matthew 14:14, Mark 6:34). James 2:15-16 warns against wishing well without meeting needs. 1 John 3:17 asks how God's love can dwell in someone who sees a brother in need and closes their heart. True compassion produces tangible help." },
     ],
   },
 
@@ -730,6 +757,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about marriage?", answer: "The Bible presents marriage as a sacred union ordained by God. Genesis 2:24 says a man shall leave his parents and cleave to his wife. Hebrews 13:4 says marriage is honourable, and Mark 10:9 says what God joins, man should not separate." },
       { question: "What are the roles of husband and wife in marriage?", answer: "Ephesians 5 instructs husbands to love their wives as Christ loved the church, and wives to respect their husbands. Both are called to mutual submission (Ephesians 5:21) and sacrificial love." },
+      { question: "Is marriage required for Christians?", answer: "No — Paul actually commended singleness as a gift that allows undivided devotion to the Lord (1 Corinthians 7:7-8, 32-35). Jesus Himself was unmarried. The Bible presents both marriage and singleness as honorable callings. Marriage is good but not mandatory for a full Christian life." },
     ],
   },
   {
@@ -755,6 +783,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about family?", answer: "The Bible places high value on family. Joshua 24:15 declares 'as for me and my house, we will serve the LORD.' Parents are instructed to teach children God's ways (Deuteronomy 6:6-7) and children to honor their parents (Exodus 20:12)." },
       { question: "How should Christian families function?", answer: "Christian families are called to love, teach Scripture to children (Proverbs 22:6), honor parents, and serve God together. Ephesians 6:4 says fathers should bring up children in the nurture and admonition of the Lord." },
+      { question: "What about believers whose families are not Christian?", answer: "Jesus acknowledged that following Him might divide families (Matthew 10:35-37) and said His true family is those who do God's will (Mark 3:35). Paul instructs believers married to unbelievers to remain if the spouse is willing (1 Corinthians 7:12-14). The church also serves as a spiritual family for those without believing relatives." },
     ],
   },
   {
@@ -780,6 +809,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about raising children?", answer: "Proverbs 22:6 says 'Train up a child in the way he should go: and when he is old, he will not depart from it.' Parents are to teach, discipline with love, and bring children up in the Lord (Ephesians 6:4)." },
       { question: "How does God view children?", answer: "Psalm 127:3 says children are a heritage and reward from the Lord. Jesus welcomed children and said the kingdom of heaven belongs to such as these (Mark 10:14). God values and cares for every child." },
+      { question: "What does the Bible say about discipline?", answer: "Proverbs 13:24 says those who love their children discipline them diligently. Hebrews 12:6-11 compares God's discipline of believers to a father's discipline of his child — painful in the moment but producing righteousness. Biblical discipline is always motivated by love, aimed at correction, and delivered with self-control." },
     ],
   },
   {
@@ -805,6 +835,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about friendship?", answer: "Proverbs 17:17 says 'A friend loveth at all times.' Proverbs 27:17 teaches that friends sharpen one another like iron. Jesus called His disciples friends (John 15:15) and modeled sacrificial friendship." },
       { question: "What makes a good friend according to Scripture?", answer: "A good friend is loyal (Proverbs 17:17), honest (Proverbs 27:6), encouraging (1 Thessalonians 5:11), and present in times of need (Ecclesiastes 4:9-10). John 15:13 says the greatest love is laying down one's life for friends." },
+      { question: "Does the Bible warn about bad friendships?", answer: "Yes — 1 Corinthians 15:33 warns that 'evil communications corrupt good manners.' Proverbs 13:20 says 'a companion of fools shall be destroyed.' Proverbs 22:24-25 warns against befriending the angry. The Bible encourages choosing friends who will build up your faith rather than pull you away from God." },
     ],
   },
   {
@@ -830,6 +861,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about leadership?", answer: "The Bible teaches servant leadership — Jesus said whoever would be great must be servant of all (Matthew 20:26). Leaders should be blameless, temperate, and examples to others (1 Timothy 3:2, 1 Peter 5:3)." },
       { question: "What qualities should a Christian leader have?", answer: "1 Timothy 3 and Titus 1 list qualities including being blameless, self-controlled, hospitable, apt to teach, not greedy, and having a good reputation. Joshua 1:9 adds courage and faithfulness." },
+      { question: "How is biblical leadership different from worldly leadership?", answer: "Jesus contrasted His model with worldly power: 'The kings of the Gentiles exercise lordship over them... But ye shall not be so' (Luke 22:25-26). Biblical leadership is measured by service, not status. Jesus washed feet, Paul made tents, and Peter was told to feed sheep — leadership as humble stewardship, not self-promotion." },
     ],
   },
   {
@@ -855,6 +887,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about work?", answer: "Colossians 3:23 says 'whatsoever ye do, do it heartily, as to the Lord.' The Bible presents work as honorable — God worked in creation (Genesis 2:2) and gave Adam work in the garden (Genesis 2:15). Laziness is condemned." },
       { question: "Should Christians view their work as service to God?", answer: "Yes — Colossians 3:23-24 says to work as unto the Lord, not men, knowing you serve Christ. 1 Corinthians 10:31 says to do all things to the glory of God, including everyday labor." },
+      { question: "Is rest biblical or is constant work expected?", answer: "God modeled rest on the seventh day (Genesis 2:2-3) and commanded Sabbath rest for His people. Jesus invited the weary to find rest in Him (Matthew 11:28-29). Psalm 127:2 says it is vain to rise early and stay up late in anxious toil. The Bible balances diligence with trust-filled rest, condemning both laziness and workaholism." },
     ],
   },
   {
@@ -880,6 +913,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about money?", answer: "The Bible warns that 'the love of money is the root of all evil' (1 Timothy 6:10) but doesn't condemn money itself. It teaches contentment (Hebrews 13:5), wise stewardship, and not serving money over God (Matthew 6:24)." },
       { question: "How should Christians handle finances?", answer: "Scripture teaches avoiding debt (Proverbs 22:7), being content (Hebrews 13:5), giving generously (2 Corinthians 9:7), saving wisely (Proverbs 13:11), and trusting God to provide (Philippians 4:19)." },
+      { question: "Is debt sinful according to the Bible?", answer: "The Bible does not call debt sinful but consistently warns against it. Proverbs 22:7 says the borrower is servant to the lender. Romans 13:8 says to owe no man anything but love. The Bible presents debt as a burden that limits freedom and generosity, counseling wisdom and caution rather than absolute prohibition." },
     ],
   },
   {
@@ -906,6 +940,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about giving?", answer: "2 Corinthians 9:7 says God loves a cheerful giver. Acts 20:35 quotes Jesus: 'It is more blessed to give than to receive.' Luke 6:38 promises that generous giving brings abundant returns." },
       { question: "Should Christians tithe?", answer: "Malachi 3:10 commands bringing tithes to the storehouse. While the New Testament emphasizes cheerful, generous giving rather than a strict percentage (2 Corinthians 9:7), many Christians practice tithing as a starting point for generosity." },
+      { question: "How much should Christians give?", answer: "The Bible gives principles rather than one fixed amount. The Old Testament required multiple tithes totaling roughly 23%. The New Testament shifts to proportional, sacrificial, cheerful giving (2 Corinthians 8:12, 9:7). Jesus commended the widow who gave all she had (Mark 12:43-44). The amount matters less than the heart behind it." },
     ],
   },
   {
@@ -931,6 +966,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about justice?", answer: "Micah 6:8 says God requires us 'to do justly, and to love mercy, and to walk humbly with thy God.' The Bible commands defending the poor and oppressed (Psalm 82:3) and letting justice roll like a river (Amos 5:24)." },
       { question: "How should Christians pursue justice?", answer: "Isaiah 1:17 says to 'learn to do well; seek judgment, relieve the oppressed, judge the fatherless, plead for the widow.' Christians are called to speak up for those who cannot speak for themselves (Proverbs 31:8-9)." },
+      { question: "How does the Bible balance justice and mercy?", answer: "God is both just and merciful — the cross demonstrates this fully, where justice was satisfied and mercy extended simultaneously (Romans 3:25-26). Micah 6:8 lists both justice and mercy as requirements. Zechariah 7:9 commands executing true judgment while showing mercy and compassion. Christians are called to uphold both without sacrificing either." },
     ],
   },
   {
@@ -956,6 +992,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about healing?", answer: "The Bible describes God as a healer — Exodus 15:26 says 'I am the LORD that healeth thee.' Isaiah 53:5 says 'with his stripes we are healed.' James 5:14-15 instructs the sick to call for prayer from church elders." },
       { question: "Does God still heal today?", answer: "Many Christians believe God still heals based on James 5:14-15 and the testimony of believers. Others note that God's answer may be healing, strength to endure, or ultimate healing in eternity. All agree prayer for the sick is commanded." },
+      { question: "Why are some people not healed despite prayer?", answer: "This is one of Christianity's most difficult pastoral questions. Paul had a 'thorn in the flesh' God chose not to remove (2 Corinthians 12:7-9). Timothy had ongoing health issues (1 Timothy 5:23). The Bible does not promise immediate physical healing for every believer, but it does promise God's presence, grace, and ultimate restoration in eternity." },
     ],
   },
   {
@@ -981,6 +1018,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about suffering?", answer: "The Bible acknowledges suffering is real but purposeful. Romans 8:18 says present sufferings are not comparable to future glory. James 1:2-3 says trials produce patience. 1 Peter 5:10 promises God will restore after suffering." },
       { question: "Why does God allow suffering?", answer: "Scripture suggests suffering builds character (Romans 5:3-4), teaches dependence on God (2 Corinthians 12:9), and refines faith (1 Peter 1:7). Jesus told followers to expect tribulation but also peace in Him (John 16:33)." },
+      { question: "How did Jesus respond to suffering?", answer: "Jesus did not avoid suffering but entered into it fully. He wept at Lazarus's tomb (John 11:35), sweat blood in Gethsemane (Luke 22:44), and cried out on the cross (Matthew 27:46). Hebrews 4:15 says He was tempted in all points as we are. His suffering was redemptive — through it, He understands ours and accomplished salvation." },
     ],
   },
   {
@@ -1006,6 +1044,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about death?", answer: "The Bible presents death as an enemy conquered by Christ. John 11:25 says 'he that believeth in me, though he were dead, yet shall he live.' 1 Corinthians 15:55 triumphantly asks 'O death, where is thy sting?'" },
       { question: "What happens after death according to the Bible?", answer: "2 Corinthians 5:8 says to be absent from the body is to be present with the Lord. 1 Thessalonians 4:13-14 promises that believers who die will be raised when Christ returns." },
+      { question: "Should Christians fear death?", answer: "The Bible says believers need not fear death. Psalm 23:4 says 'though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me.' Philippians 1:21 says 'to die is gain.' Hebrews 2:14-15 says Christ came to deliver those who through fear of death were in bondage. For believers, death is a doorway to God's presence." },
     ],
   },
   {
@@ -1031,6 +1070,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about grief?", answer: "The Bible validates grief — Jesus himself wept (John 11:35). Matthew 5:4 promises comfort for those who mourn. Psalm 34:18 says God is near to the brokenhearted. Grief is a natural response that God meets with compassion." },
       { question: "How can the Bible help someone who is grieving?", answer: "Scripture offers comfort through God's presence (Psalm 23:4), the promise of reunion (1 Thessalonians 4:13-14), and assurance that sorrow is temporary (Psalm 30:5, Revelation 21:4)." },
+      { question: "Is it okay for Christians to grieve deeply?", answer: "Absolutely. 1 Thessalonians 4:13 says believers grieve, but not without hope. Jesus wept publicly at His friend's death (John 11:35). The Psalms contain raw expressions of grief and lament (Psalm 88). Grief is not a failure of faith — it is the natural response to loss in a broken world, and God meets us in it." },
     ],
   },
   {
@@ -1056,6 +1096,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about anxiety?", answer: "Philippians 4:6 instructs 'Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.' 1 Peter 5:7 says to cast all your care upon Him." },
       { question: "How can I overcome worry according to the Bible?", answer: "Jesus said not to worry about tomorrow (Matthew 6:34). The Bible prescribes prayer (Philippians 4:6), casting cares on God (1 Peter 5:7), and focusing on His peace (John 14:27) as remedies for anxiety." },
+      { question: "Is anxiety sinful?", answer: "The Bible commands not to be anxious (Philippians 4:6) but also shows godly people experiencing anxiety — David poured out his anxious thoughts to God in the Psalms, and Paul spoke of his daily anxiety for the churches (2 Corinthians 11:28). Most Christians distinguish between sinful worry (refusing to trust God) and natural human anxiety (which we bring to God in prayer). Mental health struggles are not moral failures." },
     ],
   },
   {
@@ -1081,6 +1122,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about fear?", answer: "The command 'fear not' appears throughout Scripture. Isaiah 41:10 says 'Fear thou not; for I am with thee.' 2 Timothy 1:7 says God gives a spirit of power and love, not fear. 1 John 4:18 says perfect love casts out fear." },
       { question: "How can I overcome fear with faith?", answer: "Psalm 56:3 says 'What time I am afraid, I will trust in thee.' Fear is overcome by focusing on God's presence (Deuteronomy 31:6), His power (Isaiah 41:10), and His love (1 John 4:18)." },
+      { question: "What is the difference between godly fear and sinful fear?", answer: "The Bible distinguishes between the 'fear of the Lord' — reverent awe and respect for God (Proverbs 1:7) — and anxious, paralyzing fear of circumstances. Godly fear draws us toward God and produces wisdom. Sinful fear draws us away from obedience and trust. One leads to life; the other leads to bondage (Romans 8:15)." },
     ],
   },
   {
@@ -1106,6 +1148,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about anger?", answer: "James 1:19-20 instructs being 'slow to wrath: for the wrath of man worketh not the righteousness of God.' Ephesians 4:26 says 'Be ye angry, and sin not' — anger itself isn't always sinful, but how we respond matters." },
       { question: "How should Christians handle anger?", answer: "Proverbs 15:1 says 'A soft answer turneth away wrath.' The Bible teaches self-control (Proverbs 16:32), not nursing anger (Ephesians 4:26), and putting away all bitterness and wrath (Ephesians 4:31)." },
+      { question: "Is anger ever righteous?", answer: "Yes — Jesus displayed righteous anger when He cleansed the temple (John 2:14-16), and God's wrath against injustice is a biblical theme. Ephesians 4:26 implies anger can be sin-free. Righteous anger is directed at injustice and sin, not personal offense. It is slow to arise (James 1:19), controlled, and aims to correct wrong rather than harm people." },
     ],
   },
 
@@ -1136,6 +1179,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about capital punishment?", answer: "The Bible contains both support and challenge to capital punishment. Genesis 9:6 and Old Testament law prescribed death for murder. However, Jesus showed mercy (John 8:7) and taught nonretaliation (Matthew 5:38-39). Christians disagree on how to apply these passages today." },
       { question: "Does the New Testament support the death penalty?", answer: "Romans 13:4 says governing authorities bear the sword as God's servant. However, Jesus intervened against a lawful execution (John 8:7), and the NT emphasizes mercy, forgiveness, and leaving vengeance to God (Romans 12:19)." },
+      { question: "What are the main Christian positions on capital punishment?", answer: "Christians hold three main views: some support it as divinely authorized in Genesis 9:6 and Romans 13:4. Others oppose it based on Jesus's teachings on mercy and the sanctity of life. Still others take a middle position, allowing it in principle but questioning its application in a fallen justice system." },
     ],
   },
   {
@@ -1167,6 +1211,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about gender roles?", answer: "The Bible presents a range of perspectives. Genesis 1:27 says both male and female are made in God's image. Galatians 3:28 declares equality in Christ. Some passages describe role distinctions in marriage and church (Ephesians 5:22-25, 1 Timothy 2:12), which Christians interpret differently." },
       { question: "Does the Bible teach male headship or equality?", answer: "Both concepts appear in Scripture. 1 Corinthians 11:3 mentions headship, while Galatians 3:28 emphasizes equality in Christ. Ephesians 5:21 calls for mutual submission. Christians hold complementarian and egalitarian views based on how they interpret these passages." },
+      { question: "How do complementarian and egalitarian views differ?", answer: "Complementarians believe men and women have equal worth but distinct roles, with male leadership in home and church. Egalitarians believe all roles are open to both genders based on gifting, not gender. Both cite Scripture and share a commitment to honoring God's design for human flourishing." },
     ],
   },
   {
@@ -1199,6 +1244,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "How does the Bible portray women?", answer: "The Bible includes heroic women leaders (Deborah in Judges 4), women of faith (Ruth), courage (Esther), and wisdom (Proverbs 31). Both Genesis 1:27 and Galatians 3:28 affirm women's equal worth before God." },
       { question: "What did Jesus teach about women?", answer: "Jesus elevated women radically for His culture — He taught women (Luke 10:39), spoke to them publicly (John 4), included them in His ministry (Luke 8:1-3), and appeared first to women after resurrection (Mark 16:9)." },
+      { question: "Can women serve in church leadership according to the Bible?", answer: "Christians hold different views on this question. Some cite 1 Timothy 2:12 and 1 Corinthians 14:34 as prohibiting women from teaching or leading in church. Others point to Deborah as judge, Priscilla as teacher (Acts 18:26), Phoebe as deacon (Romans 16:1), and Junia as apostle (Romans 16:7) as evidence of women in leadership throughout Scripture." },
     ],
   },
   {
@@ -1230,6 +1276,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "Why does the Old Testament contain accounts of genocide?", answer: "These passages are among the most difficult in Scripture. They describe God commanding the destruction of Canaanite nations. Scholars offer various explanations: divine judgment on extreme wickedness, hyperbolic war language common in ancient Near East, or progressive revelation showing God's fuller character revealed in Christ." },
       { question: "How do Christians reconcile Old Testament violence with Jesus?", answer: "Christians interpret these passages in various ways: some see them as God's specific judgment for specific times, not a model for today. Others emphasize Christ's teaching of enemy-love as God's ultimate revelation. Most agree these texts require honest engagement, not dismissal." },
+      { question: "What is the 'Canaanite conquest' and why is it controversial?", answer: "The Canaanite conquest refers to Israel's military campaigns in Joshua and Judges where God commanded destruction of specific nations. It is controversial because it appears to conflict with God's love and mercy. Scholars debate whether the language is literal or uses ancient Near Eastern war rhetoric, and whether the command was unique to that historical moment of divine judgment." },
     ],
   },
   {
@@ -1268,6 +1315,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "Does the Bible condone slavery?", answer: "The Bible regulated slavery within its ancient context while planting seeds for its abolition. Old Testament law limited terms and protected servants' rights. Paul urged Philemon to receive his slave 'as a brother' (Philemon 16). Galatians 3:28 declares all are one in Christ." },
       { question: "How did Christians historically use the Bible regarding slavery?", answer: "Tragically, some used passages like Ephesians 6:5 to justify slavery. However, abolitionists also used Scripture — particularly Galatians 3:28, Exodus's liberation narrative, and Jesus's teachings on human dignity — to argue against the institution." },
+      { question: "Was biblical slavery the same as American chattel slavery?", answer: "Most scholars distinguish ancient Near Eastern servitude from race-based chattel slavery. Biblical slavery often involved debt repayment with legal protections and term limits (Exodus 21:2, Deuteronomy 15:12). However, Leviticus 25:44-46 permitted permanent ownership of foreigners. The Bible's overall trajectory moves toward liberation and human dignity." },
     ],
   },
   {
@@ -1293,6 +1341,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about war?", answer: "The Bible contains both warrior imagery and peace ideals. Ecclesiastes 3:8 acknowledges 'a time of war, and a time of peace.' Isaiah 2:4 envisions beating swords into plowshares. Jesus called peacemakers blessed (Matthew 5:9) while acknowledging temporal authorities' sword-bearing role (Romans 13:4)." },
       { question: "Is war ever justified according to Scripture?", answer: "Christians hold pacifist and just-war positions. Pacifists cite Jesus's nonviolence and love-of-enemies teaching. Just-war advocates point to Romans 13, Old Testament wars, and the duty to protect the innocent. Both positions have long biblical and theological traditions." },
+      { question: "What is the difference between pacifism and just war theory?", answer: "Christian pacifists believe Jesus's commands to love enemies and turn the other cheek prohibit all participation in violence. Just war theorists, drawing from Augustine and Aquinas, argue that war may be morally permissible when fought for a just cause, as a last resort, with proportional force, and with the goal of restoring peace. Both traditions seek to follow Christ faithfully." },
     ],
   },
   {
@@ -1318,6 +1367,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about divorce?", answer: "Jesus said 'What therefore God hath joined together, let not man put asunder' (Mark 10:9). Malachi 2:16 expresses God's displeasure with divorce. However, Jesus acknowledged an exception for sexual immorality (Matthew 19:9), and Paul allowed separation if an unbelieving spouse departs (1 Corinthians 7:15)." },
       { question: "Can divorced Christians remarry?", answer: "Christians interpret this differently. Matthew 19:9 allows remarriage after divorce for unfaithfulness. 1 Corinthians 7:15 may allow it when abandoned by an unbeliever. Some traditions restrict remarriage entirely. All agree God offers grace and restoration." },
+      { question: "What are the biblical grounds for divorce?", answer: "Christians generally recognize two or three grounds: sexual immorality based on Matthew 19:9, desertion by an unbelieving spouse based on 1 Corinthians 7:15, and some traditions include abuse based on the principle that marriage should reflect Christ's love, not destruction. Others hold that no grounds exist for divorce while both spouses live." },
     ],
   },
   {
@@ -1343,6 +1393,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about homosexuality?", answer: "Several passages address same-sex sexual activity: Leviticus 18:22, Romans 1:26-27, and 1 Corinthians 6:9-10 among others. Christians differ on interpretation — traditionalists see these as prohibiting all same-sex activity, while affirming scholars argue these address specific practices (exploitation, idolatry) rather than committed relationships." },
       { question: "How should Christians approach this topic?", answer: "All major Christian traditions agree on treating every person with dignity and love. The debate centers on whether biblical prohibitions apply to modern committed same-sex relationships or were addressing different cultural practices. Both traditional and affirming Christians base their views on Scripture." },
+      { question: "What is the 'Side A' vs 'Side B' distinction among Christians?", answer: "In modern Christian discourse, 'Side A' Christians affirm same-sex marriages as compatible with Scripture, interpreting the prohibitions as addressing exploitative practices rather than loving commitments. 'Side B' Christians hold that same-sex attraction is not sinful but that sexual activity is reserved for heterosexual marriage. Both groups affirm the dignity and worth of LGBTQ+ individuals." },
     ],
   },
   {
@@ -1368,6 +1419,7 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "Does the Bible forbid drinking alcohol?", answer: "The Bible does not prohibit all alcohol — Jesus turned water into wine (John 2:9) and Paul recommended wine for Timothy's stomach (1 Timothy 5:23). However, it strongly condemns drunkenness (Ephesians 5:18, Galatians 5:21) and warns about alcohol's dangers (Proverbs 20:1, 23:29-31)." },
       { question: "What is the Christian view on alcohol?", answer: "Christians hold varied views. Some practice total abstinence based on wisdom principles. Others allow moderate consumption. All agree the Bible prohibits drunkenness and that wisdom and self-control should govern decisions about alcohol." },
+      { question: "Did Jesus drink wine or grape juice?", answer: "Christians debate this point. Those favoring moderation note that the Greek word 'oinos' consistently means fermented wine throughout Scripture and secular literature, and that Jesus was accused of being a 'winebibber' (Matthew 11:19). Those favoring abstinence argue that some biblical wine references may indicate unfermented juice. The cultural context suggests fermented wine was the norm in first-century Palestine." },
     ],
   },
   {
@@ -1393,6 +1445,293 @@ export const TOPICS: Topic[] = [
     faq: [
       { question: "What does the Bible say about wealth?", answer: "The Bible presents a nuanced view of wealth. It warns that loving money is the root of all evil (1 Timothy 6:10) and that it's hard for the rich to enter heaven (Matthew 19:24). Yet wealth itself isn't condemned — rather its misuse and the pride it can breed. The rich are instructed to be generous (1 Timothy 6:17-18)." },
       { question: "What does the Bible say about the poor?", answer: "God shows special concern for the poor throughout Scripture. Proverbs 19:17 says lending to the poor is lending to God. James 2:5 says God chose the poor to be rich in faith. Deuteronomy 15:11 commands open-handedness toward the needy." },
+      { question: "Does God want all Christians to be wealthy?", answer: "Christians hold different views. Prosperity theology teaches that faith leads to material blessings, citing Deuteronomy 28 and Malachi 3:10. Others point to Jesus's poverty, Paul's contentment in need (Philippians 4:12), and warnings against wealth (Luke 6:24) as evidence that godliness does not guarantee material prosperity. Most traditions teach faithful stewardship regardless of economic status." },
+    ],
+  },
+  // --- New Controversial Topics ---
+  {
+    name: "Predestination vs Free Will",
+    slug: "predestination-vs-free-will",
+    description: "Bible passages about predestination, election, human choice, and the tension between God's sovereignty and human responsibility.",
+    category: "Difficult & Controversial",
+    verses: [
+      { book: "Romans", chapter: 8, verse: 29 },
+      { book: "Romans", chapter: 8, verse: 30 },
+      { book: "Ephesians", chapter: 1, verse: 4 },
+      { book: "Ephesians", chapter: 1, verse: 5 },
+      { book: "2 Peter", chapter: 3, verse: 9 },
+      { book: "Joshua", chapter: 24, verse: 15 },
+      { book: "John", chapter: 3, verse: 16 },
+      { book: "Romans", chapter: 9, verse: 11 },
+      { book: "Romans", chapter: 9, verse: 13 },
+      { book: "Philippians", chapter: 2, verse: 12 },
+      { book: "Philippians", chapter: 2, verse: 13 },
+      { book: "1 Timothy", chapter: 2, verse: 4 },
+      { book: "Acts", chapter: 13, verse: 48 },
+      { book: "Deuteronomy", chapter: 30, verse: 19 },
+    ],
+    relatedTopics: ["salvation", "grace", "faith", "eternal-life"],
+    faq: [
+      { question: "What does the Bible say about predestination?", answer: "Romans 8:29-30 speaks of those God foreknew being predestined, called, justified, and glorified. Ephesians 1:4-5 says God chose believers before the foundation of the world. These passages form the basis of the doctrine of election, though Christians interpret their scope and mechanism differently." },
+      { question: "Does the Bible teach free will?", answer: "Numerous passages present genuine human choice: Joshua 24:15 says 'choose you this day whom ye will serve,' Deuteronomy 30:19 sets life and death before the people as a choice, and 2 Peter 3:9 says God is not willing that any should perish. Christians debate how divine sovereignty and human responsibility work together." },
+      { question: "What is the difference between Calvinism and Arminianism?", answer: "Calvinism emphasizes God's sovereign election, teaching that God unconditionally chooses who will be saved and that grace is irresistible. Arminianism emphasizes human free will, teaching that God's grace enables but does not compel belief, and that humans can accept or reject salvation. Both traditions affirm salvation by grace through faith and have deep roots in church history." },
+    ],
+  },
+  {
+    name: "Hell and Eternal Punishment",
+    slug: "hell-and-eternal-punishment",
+    description: "Bible passages about hell, final judgment, and the fate of the unrighteous — exploring eternal conscious torment, annihilationism, and universalism.",
+    category: "Difficult & Controversial",
+    verses: [
+      { book: "Matthew", chapter: 25, verse: 41 },
+      { book: "Matthew", chapter: 25, verse: 46 },
+      { book: "Revelation", chapter: 20, verse: 10 },
+      { book: "Mark", chapter: 9, verse: 43 },
+      { book: "Luke", chapter: 16, verse: 23 },
+      { book: "Luke", chapter: 16, verse: 24 },
+      { book: "2 Thessalonians", chapter: 1, verse: 9 },
+      { book: "Romans", chapter: 6, verse: 23 },
+      { book: "Jude", chapter: 1, verse: 7 },
+      { book: "Ezekiel", chapter: 18, verse: 4 },
+      { book: "Matthew", chapter: 10, verse: 28 },
+      { book: "Revelation", chapter: 21, verse: 8 },
+    ],
+    relatedTopics: ["eternal-life", "salvation", "heaven", "repentance"],
+    faq: [
+      { question: "What does the Bible say about hell?", answer: "The Bible describes hell using vivid imagery: eternal fire (Matthew 25:41), outer darkness (Matthew 25:30), and separation from God (2 Thessalonians 1:9). Jesus spoke more about hell than any other biblical figure, using terms like Gehenna and describing it as a place prepared for the devil and his angels." },
+      { question: "Do all Christians believe in eternal conscious torment?", answer: "Christians hold three main views on hell. Traditional/eternal conscious torment holds that the unsaved suffer forever (Revelation 20:10, Matthew 25:46). Annihilationism (conditional immortality) teaches that the unsaved are ultimately destroyed rather than tormented eternally (Matthew 10:28, Romans 6:23). Universal reconciliation suggests all will eventually be restored to God. Each view claims biblical support." },
+      { question: "Is the Bible's language about hell literal or metaphorical?", answer: "Christians disagree on this. Some take descriptions of fire and darkness literally as physical realities. Others note that fire and darkness are contradictory if both literal, suggesting metaphorical language pointing to a terrible but indescribable reality. Most agree that whatever hell is, it involves separation from God's blessing and is something to be avoided at all costs." },
+    ],
+  },
+  {
+    name: "Speaking in Tongues",
+    slug: "speaking-in-tongues",
+    description: "Bible passages about speaking in tongues, spiritual gifts, and the debate between cessationism and continuationism.",
+    category: "Difficult & Controversial",
+    verses: [
+      { book: "1 Corinthians", chapter: 14, verse: 2 },
+      { book: "1 Corinthians", chapter: 14, verse: 5 },
+      { book: "1 Corinthians", chapter: 14, verse: 18 },
+      { book: "1 Corinthians", chapter: 14, verse: 19 },
+      { book: "1 Corinthians", chapter: 14, verse: 27 },
+      { book: "1 Corinthians", chapter: 14, verse: 28 },
+      { book: "1 Corinthians", chapter: 14, verse: 39 },
+      { book: "Acts", chapter: 2, verse: 4 },
+      { book: "Acts", chapter: 10, verse: 46 },
+      { book: "Acts", chapter: 19, verse: 6 },
+      { book: "Mark", chapter: 16, verse: 17 },
+      { book: "1 Corinthians", chapter: 12, verse: 10 },
+      { book: "1 Corinthians", chapter: 13, verse: 8 },
+    ],
+    relatedTopics: ["holy-spirit", "prayer", "worship", "spiritual-growth"],
+    faq: [
+      { question: "What does the Bible say about speaking in tongues?", answer: "Acts 2:4 records the first occurrence at Pentecost, where believers spoke in known foreign languages. Paul discusses tongues extensively in 1 Corinthians 12-14, listing it as a spiritual gift while providing guidelines for its use in worship: interpretation must accompany public tongues-speaking, and orderliness should prevail." },
+      { question: "Are tongues still active today or have they ceased?", answer: "Cessationists believe tongues and certain miraculous gifts ended with the apostolic era, citing 1 Corinthians 13:8 ('tongues shall cease') and arguing that these gifts served to authenticate the apostles and establish the early church. Continuationists believe all spiritual gifts remain active today, pointing to the lack of a clear biblical cessation date and the ongoing experience of millions of Christians worldwide." },
+      { question: "Is speaking in tongues required as evidence of the Holy Spirit?", answer: "Pentecostal traditions often teach that tongues is the initial physical evidence of Spirit baptism, based on patterns in Acts 2, 10, and 19. Other traditions note that Paul asked 'Do all speak with tongues?' (1 Corinthians 12:30) implying not everyone receives this gift. Most Christians agree the Holy Spirit's presence is evidenced primarily by the fruit of the Spirit (Galatians 5:22-23)." },
+    ],
+  },
+  {
+    name: "Tithing",
+    slug: "tithing",
+    description: "Bible passages about tithing, giving, and whether the Old Testament tithe applies to New Testament believers.",
+    category: "Difficult & Controversial",
+    verses: [
+      { book: "Malachi", chapter: 3, verse: 10 },
+      { book: "Matthew", chapter: 23, verse: 23 },
+      { book: "2 Corinthians", chapter: 9, verse: 7 },
+      { book: "Luke", chapter: 6, verse: 38 },
+      { book: "Proverbs", chapter: 3, verse: 9 },
+      { book: "Proverbs", chapter: 3, verse: 10 },
+      { book: "Genesis", chapter: 14, verse: 20 },
+      { book: "Hebrews", chapter: 7, verse: 1 },
+      { book: "Hebrews", chapter: 7, verse: 2 },
+      { book: "1 Corinthians", chapter: 16, verse: 2 },
+      { book: "Acts", chapter: 4, verse: 34 },
+      { book: "Acts", chapter: 4, verse: 35 },
+      { book: "Leviticus", chapter: 27, verse: 30 },
+    ],
+    relatedTopics: ["generosity", "money", "wealth-and-poverty", "faith"],
+    faq: [
+      { question: "Is tithing required for Christians?", answer: "Christians hold different views. Some teach that the 10% tithe remains binding, citing Malachi 3:10 and noting that Abraham tithed before the Law (Genesis 14:20). Others argue that tithing was part of the Old Covenant law fulfilled in Christ, and that New Testament giving is based on cheerfulness and ability (2 Corinthians 9:7), not a fixed percentage." },
+      { question: "What does the New Testament say about giving?", answer: "The New Testament emphasizes generous, cheerful, sacrificial giving rather than a mandated percentage. 2 Corinthians 9:7 says each should give 'as he purposeth in his heart.' Acts 4:34-35 describes early Christians sharing everything. Paul instructed setting aside money regularly (1 Corinthians 16:2). Jesus commended the widow who gave all she had (Mark 12:43-44)." },
+      { question: "Should tithes go only to the local church?", answer: "Some traditions teach that the tithe belongs specifically to the local church based on Malachi 3:10's 'storehouse' language. Others interpret 'storehouse' more broadly to include any kingdom work — missions, parachurch ministries, or helping the poor directly. Most agree that supporting one's local church community is important while also giving to other needs." },
+    ],
+  },
+  {
+    name: "Sabbath",
+    slug: "sabbath",
+    description: "Bible passages about the Sabbath day, rest, and whether Christians are obligated to observe a specific day of worship.",
+    category: "Difficult & Controversial",
+    verses: [
+      { book: "Exodus", chapter: 20, verse: 8 },
+      { book: "Mark", chapter: 2, verse: 27 },
+      { book: "Mark", chapter: 2, verse: 28 },
+      { book: "Romans", chapter: 14, verse: 5 },
+      { book: "Romans", chapter: 14, verse: 6 },
+      { book: "Colossians", chapter: 2, verse: 16 },
+      { book: "Acts", chapter: 20, verse: 7 },
+      { book: "Hebrews", chapter: 4, verse: 9 },
+      { book: "Hebrews", chapter: 4, verse: 10 },
+      { book: "Isaiah", chapter: 58, verse: 13 },
+      { book: "Isaiah", chapter: 58, verse: 14 },
+      { book: "Matthew", chapter: 12, verse: 8 },
+      { book: "Galatians", chapter: 4, verse: 9 },
+      { book: "Galatians", chapter: 4, verse: 10 },
+      { book: "Genesis", chapter: 2, verse: 2 },
+      { book: "Genesis", chapter: 2, verse: 3 },
+    ],
+    relatedTopics: ["worship", "faith", "grace", "spiritual-growth"],
+    faq: [
+      { question: "Are Christians required to keep the Sabbath?", answer: "Christians hold different views. Seventh-day traditions (Adventists, some Baptists) maintain Saturday Sabbath observance as a perpetual commandment rooted in creation (Genesis 2:2-3). Most Protestant and Catholic traditions worship on Sunday, seeing it as the Lord's Day commemorating the resurrection. Others cite Romans 14:5 and Colossians 2:16 to argue that no specific day is mandated under the new covenant." },
+      { question: "Why do most Christians worship on Sunday instead of Saturday?", answer: "The early church began gathering on 'the first day of the week' (Acts 20:7, 1 Corinthians 16:2) to celebrate Christ's resurrection, which occurred on Sunday. By the second century, Sunday worship was widespread. Some argue this represents apostolic authority to shift the day, while others see it as an unauthorized departure from the fourth commandment." },
+      { question: "What is the principle of Sabbath rest?", answer: "Beyond the day debate, most Christians agree on the principle of regular rest as God's design. Genesis 2:2-3 shows God resting after creation. Mark 2:27 says the Sabbath was made for man's benefit. Hebrews 4:9-10 speaks of a spiritual rest believers enter through faith. The Sabbath principle points to trusting God rather than relying solely on our own labor." },
+    ],
+  },
+  {
+    name: "Abortion",
+    slug: "abortion",
+    description: "Bible passages about the sanctity of life, when life begins, and the value of the unborn in God's eyes.",
+    category: "Difficult & Controversial",
+    verses: [
+      { book: "Psalms", chapter: 139, verse: 13 },
+      { book: "Psalms", chapter: 139, verse: 14 },
+      { book: "Psalms", chapter: 139, verse: 15 },
+      { book: "Psalms", chapter: 139, verse: 16 },
+      { book: "Jeremiah", chapter: 1, verse: 5 },
+      { book: "Exodus", chapter: 21, verse: 22 },
+      { book: "Exodus", chapter: 21, verse: 23 },
+      { book: "Exodus", chapter: 21, verse: 24 },
+      { book: "Exodus", chapter: 21, verse: 25 },
+      { book: "Genesis", chapter: 2, verse: 7 },
+      { book: "Job", chapter: 31, verse: 15 },
+      { book: "Isaiah", chapter: 44, verse: 2 },
+      { book: "Luke", chapter: 1, verse: 41 },
+      { book: "Luke", chapter: 1, verse: 44 },
+      { book: "Psalms", chapter: 127, verse: 3 },
+      { book: "Genesis", chapter: 9, verse: 6 },
+      { book: "Proverbs", chapter: 6, verse: 16 },
+      { book: "Proverbs", chapter: 6, verse: 17 },
+    ],
+    relatedTopics: ["children", "family", "justice", "compassion"],
+    faq: [
+      { question: "What does the Bible say about when life begins?", answer: "Psalm 139:13-16 describes God forming the unborn child in the womb and knowing them before birth. Jeremiah 1:5 says God knew and set apart the prophet before he was born. Luke 1:41-44 describes John the Baptist leaping in the womb. These passages lead many Christians to believe personhood begins at conception, though the Bible does not explicitly state the moment life begins." },
+      { question: "Does the Bible directly address abortion?", answer: "The Bible does not use the word 'abortion' or explicitly address the modern medical procedure. Christians draw conclusions from broader principles: the sanctity of life (Genesis 9:6), God's knowledge of the unborn (Psalm 139, Jeremiah 1:5), and laws about harm to a pregnant woman (Exodus 21:22-25). The interpretation of Exodus 21:22-25 is particularly debated regarding whether it treats the fetus as a full person." },
+      { question: "What are the different Christian views on abortion?", answer: "Most Christian traditions oppose elective abortion based on the sanctity of life. However, views differ on exceptions for rape, incest, and maternal health. Some hold that all abortion is wrong in every circumstance. Others allow exceptions in extreme cases while opposing abortion generally. A smaller number of Christians emphasize the complexity of difficult circumstances and the role of individual conscience guided by prayer." },
+    ],
+  },
+  {
+    name: "Evolution and Creation",
+    slug: "evolution-and-creation",
+    description: "Bible passages about creation, the origin of life, and how Christians interpret Genesis in light of modern science.",
+    category: "Difficult & Controversial",
+    verses: [
+      { book: "Genesis", chapter: 1, verse: 1 },
+      { book: "Genesis", chapter: 1, verse: 26 },
+      { book: "Genesis", chapter: 1, verse: 27 },
+      { book: "Genesis", chapter: 2, verse: 7 },
+      { book: "Psalms", chapter: 33, verse: 6 },
+      { book: "Hebrews", chapter: 11, verse: 3 },
+      { book: "2 Peter", chapter: 3, verse: 8 },
+      { book: "Colossians", chapter: 1, verse: 16 },
+      { book: "John", chapter: 1, verse: 3 },
+      { book: "Romans", chapter: 1, verse: 20 },
+      { book: "Psalms", chapter: 104, verse: 24 },
+      { book: "Psalms", chapter: 104, verse: 25 },
+    ],
+    relatedTopics: ["faith", "wisdom", "trust-in-god", "spiritual-growth"],
+    faq: [
+      { question: "Does the Bible conflict with evolution?", answer: "Christians hold varied positions. Young-earth creationists interpret Genesis 1 as six literal 24-hour days and reject evolution. Old-earth creationists accept an ancient universe but question macroevolution. Theistic evolutionists (evolutionary creationists) believe God used evolutionary processes to create life. All affirm God as Creator; they differ on the method and timeline." },
+      { question: "Should Genesis 1 be read literally?", answer: "Christians disagree on this. Literal interpreters point to the structured 'evening and morning' language and genealogies suggesting a young earth. Others note the poetic structure, the use of 'day' (yom) elsewhere for indefinite periods, and 2 Peter 3:8 ('one day is with the Lord as a thousand years'). Some see Genesis 1 as theological truth about who created, not a scientific account of how." },
+      { question: "Can a Christian believe in an old earth?", answer: "Many faithful Christians hold old-earth positions while fully affirming Scripture's authority. They argue that Genesis communicates theological truths — God's sovereignty, humanity's special creation, and the goodness of the physical world — without requiring a specific scientific timeline. Others insist that biblical authority requires accepting the young-earth reading. This remains an intramural debate among Bible-believing Christians." },
+    ],
+  },
+  {
+    name: "Interracial Marriage",
+    slug: "interracial-marriage",
+    description: "Bible passages about race, marriage across ethnic lines, and the unity of all peoples in God's creation.",
+    category: "Difficult & Controversial",
+    verses: [
+      { book: "Acts", chapter: 17, verse: 26 },
+      { book: "Galatians", chapter: 3, verse: 28 },
+      { book: "Numbers", chapter: 12, verse: 1 },
+      { book: "Genesis", chapter: 2, verse: 24 },
+      { book: "Colossians", chapter: 3, verse: 11 },
+      { book: "1 Corinthians", chapter: 7, verse: 39 },
+      { book: "Song of Solomon", chapter: 1, verse: 5 },
+      { book: "Song of Solomon", chapter: 1, verse: 6 },
+      { book: "Revelation", chapter: 7, verse: 9 },
+      { book: "Deuteronomy", chapter: 7, verse: 3 },
+      { book: "Deuteronomy", chapter: 7, verse: 4 },
+      { book: "Ruth", chapter: 1, verse: 16 },
+    ],
+    relatedTopics: ["marriage", "love", "justice", "family"],
+    faq: [
+      { question: "Does the Bible prohibit interracial marriage?", answer: "No. The Bible never prohibits marriage based on skin color or ethnicity. Acts 17:26 says God made all nations from one blood. Deuteronomy 7:3-4's prohibition was about marrying those of different faith, not different race — verse 4 explicitly states the concern was being turned to other gods. Moses married an Ethiopian woman (Numbers 12:1), and God punished Miriam for objecting." },
+      { question: "Why was interracial marriage historically opposed using the Bible?", answer: "During slavery and segregation, some misused passages like the 'curse of Ham' (Genesis 9:25) and God separating nations (Acts 17:26) to argue against racial mixing. These interpretations are now widely rejected as eisegesis — reading prejudice into the text. The overwhelming biblical witness affirms human unity in creation and in Christ (Galatians 3:28, Colossians 3:11)." },
+      { question: "What does the Bible say about racial unity?", answer: "Scripture presents a vision of multi-ethnic unity. Revelation 7:9 pictures heaven with people from every nation and tongue worshipping together. Galatians 3:28 declares no racial distinctions in Christ. The early church intentionally crossed ethnic barriers (Acts 10, Ephesians 2:14). The Bible's trajectory moves consistently toward the reconciliation of all peoples in Christ." },
+    ],
+  },
+  {
+    name: "Judging Others",
+    slug: "judging-others",
+    description: "Bible passages about judgment, discernment, and when it is appropriate or inappropriate to judge the actions of others.",
+    category: "Difficult & Controversial",
+    verses: [
+      { book: "Matthew", chapter: 7, verse: 1 },
+      { book: "Matthew", chapter: 7, verse: 2 },
+      { book: "Matthew", chapter: 7, verse: 3 },
+      { book: "Matthew", chapter: 7, verse: 4 },
+      { book: "Matthew", chapter: 7, verse: 5 },
+      { book: "John", chapter: 7, verse: 24 },
+      { book: "1 Corinthians", chapter: 5, verse: 12 },
+      { book: "1 Corinthians", chapter: 6, verse: 2 },
+      { book: "1 Corinthians", chapter: 6, verse: 3 },
+      { book: "Galatians", chapter: 6, verse: 1 },
+      { book: "James", chapter: 4, verse: 11 },
+      { book: "James", chapter: 4, verse: 12 },
+      { book: "Luke", chapter: 6, verse: 37 },
+      { book: "Romans", chapter: 14, verse: 10 },
+      { book: "Romans", chapter: 14, verse: 13 },
+      { book: "Matthew", chapter: 18, verse: 15 },
+      { book: "Proverbs", chapter: 31, verse: 9 },
+    ],
+    relatedTopics: ["forgiveness", "love", "wisdom", "humility"],
+    faq: [
+      { question: "Does Jesus forbid all judging?", answer: "Matthew 7:1 ('Judge not, that ye be not judged') is often quoted in isolation, but the full passage (7:1-5) prohibits hypocritical judgment while allowing discernment once you address your own sins. John 7:24 says to 'judge righteous judgment.' The Bible distinguishes between condemnatory hypocrisy and the loving discernment necessary for church life and personal wisdom." },
+      { question: "When is judging appropriate according to Scripture?", answer: "Paul explicitly instructs judging within the church (1 Corinthians 5:12) and says believers will judge angels (1 Corinthians 6:2-3). Matthew 18:15-17 outlines a process for addressing a brother's sin. Galatians 6:1 calls for restoring the fallen in gentleness. Proverbs 31:9 commands judging righteously and defending the poor. Righteous judgment is done with humility, love, and self-examination." },
+      { question: "What is the difference between judging and discernment?", answer: "Christians generally distinguish between self-righteous condemnation (forbidden) and spiritual discernment (required). Judging condemns the person; discernment evaluates actions and teachings. Jesus said to identify false prophets by their fruit (Matthew 7:15-20) — which requires evaluation — in the same sermon where He said 'judge not.' The key difference lies in the heart: is the goal restoration and truth, or superiority and condemnation?" },
+    ],
+  },
+  {
+    name: "End Times / Rapture",
+    slug: "end-times-rapture",
+    description: "Bible passages about the end times, the rapture, Christ's return, and the various millennial views held by Christians.",
+    category: "Difficult & Controversial",
+    verses: [
+      { book: "1 Thessalonians", chapter: 4, verse: 16 },
+      { book: "1 Thessalonians", chapter: 4, verse: 17 },
+      { book: "Matthew", chapter: 24, verse: 29 },
+      { book: "Matthew", chapter: 24, verse: 30 },
+      { book: "Matthew", chapter: 24, verse: 31 },
+      { book: "Revelation", chapter: 20, verse: 4 },
+      { book: "Revelation", chapter: 20, verse: 5 },
+      { book: "Revelation", chapter: 20, verse: 6 },
+      { book: "2 Peter", chapter: 3, verse: 10 },
+      { book: "Daniel", chapter: 9, verse: 27 },
+      { book: "Matthew", chapter: 24, verse: 36 },
+      { book: "1 Corinthians", chapter: 15, verse: 51 },
+      { book: "1 Corinthians", chapter: 15, verse: 52 },
+      { book: "Revelation", chapter: 3, verse: 10 },
+      { book: "2 Thessalonians", chapter: 2, verse: 1 },
+      { book: "2 Thessalonians", chapter: 2, verse: 3 },
+      { book: "Matthew", chapter: 24, verse: 40 },
+      { book: "Matthew", chapter: 24, verse: 41 },
+    ],
+    relatedTopics: ["heaven", "eternal-life", "death", "hope"],
+    faq: [
+      { question: "What is the rapture and is it biblical?", answer: "The rapture refers to 1 Thessalonians 4:16-17, where believers are 'caught up' to meet the Lord in the air. Christians debate its timing and nature. Pre-tribulationists believe Christians will be taken before a period of tribulation. Post-tribulationists see it as occurring at Christ's visible return. Some traditions do not use the term 'rapture' at all, viewing it as one event with Christ's second coming." },
+      { question: "What are the main views on the millennium?", answer: "Premillennialism teaches Christ will return before a literal 1000-year reign on earth (Revelation 20:4-6). Amillennialism interprets the millennium symbolically as the present church age. Postmillennialism believes the world will be Christianized before Christ returns. Each view has substantial historical precedent and theological arguments from Scripture." },
+      { question: "Can we know when Jesus will return?", answer: "Matthew 24:36 says no one knows the day or hour, not even the angels or the Son, but only the Father. Despite this, Jesus gave signs to watch for (Matthew 24:4-31). Christians are called to be ready at all times (Matthew 25:13) rather than setting dates. Throughout history, all date-setting predictions have proven false, reinforcing Jesus's own teaching on the unknowability of the timing." },
     ],
   },
 ];
