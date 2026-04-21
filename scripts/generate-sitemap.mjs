@@ -5,62 +5,45 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const projectRoot = resolve(__dirname, "..");
 
-// Load KJV data
+// Load KJV data (source of truth for book/chapter structure)
 const kjvData = JSON.parse(
   readFileSync(resolve(projectRoot, "data/kjv.json"), "utf8")
 );
 
+// Read BOOK_META from bible-data.ts to get slugs (matches generateStaticParams)
+const bibleDataSource = readFileSync(
+  resolve(projectRoot, "src/lib/bible-data.ts"),
+  "utf8"
+);
+
+const bookMetaMatches = [
+  ...bibleDataSource.matchAll(/\{\s*name:\s*"([^"]+)",\s*slug:\s*"([^"]+)"/g),
+];
+const BOOK_META = bookMetaMatches.map((m) => ({ name: m[1], slug: m[2] }));
+
+if (BOOK_META.length === 0) {
+  throw new Error("Failed to extract BOOK_META from src/lib/bible-data.ts");
+}
+
+// Read topic slugs from topics-data.ts (matches generateStaticParams)
+const topicsSource = readFileSync(
+  resolve(projectRoot, "src/lib/topics-data.ts"),
+  "utf8"
+);
+
+// Extract topic slugs - they appear as `slug: "topic-slug"` inside TOPICS array
+const topicsArrayMatch = topicsSource.match(
+  /export const TOPICS[\s\S]*?:\s*Topic\[\]\s*=\s*\[([\s\S]*)\];/
+);
+const topicsContent = topicsArrayMatch ? topicsArrayMatch[1] : topicsSource;
+const topicSlugMatches = [...topicsContent.matchAll(/slug:\s*"([^"]+)"/g)];
+const TOPICS = topicSlugMatches.map((m) => m[1]);
+
+if (TOPICS.length === 0) {
+  throw new Error("Failed to extract TOPICS from src/lib/topics-data.ts");
+}
+
 const DOMAIN = "https://biblegarden.net";
-
-// Book metadata
-const BOOK_META = [
-  { name: "Genesis", slug: "genesis" }, { name: "Exodus", slug: "exodus" },
-  { name: "Leviticus", slug: "leviticus" }, { name: "Numbers", slug: "numbers" },
-  { name: "Deuteronomy", slug: "deuteronomy" }, { name: "Joshua", slug: "joshua" },
-  { name: "Judges", slug: "judges" }, { name: "Ruth", slug: "ruth" },
-  { name: "1 Samuel", slug: "1-samuel" }, { name: "2 Samuel", slug: "2-samuel" },
-  { name: "1 Kings", slug: "1-kings" }, { name: "2 Kings", slug: "2-kings" },
-  { name: "1 Chronicles", slug: "1-chronicles" }, { name: "2 Chronicles", slug: "2-chronicles" },
-  { name: "Ezra", slug: "ezra" }, { name: "Nehemiah", slug: "nehemiah" },
-  { name: "Esther", slug: "esther" }, { name: "Job", slug: "job" },
-  { name: "Psalms", slug: "psalms" }, { name: "Proverbs", slug: "proverbs" },
-  { name: "Ecclesiastes", slug: "ecclesiastes" }, { name: "Song of Solomon", slug: "song-of-solomon" },
-  { name: "Isaiah", slug: "isaiah" }, { name: "Jeremiah", slug: "jeremiah" },
-  { name: "Lamentations", slug: "lamentations" }, { name: "Ezekiel", slug: "ezekiel" },
-  { name: "Daniel", slug: "daniel" }, { name: "Hosea", slug: "hosea" },
-  { name: "Joel", slug: "joel" }, { name: "Amos", slug: "amos" },
-  { name: "Obadiah", slug: "obadiah" }, { name: "Jonah", slug: "jonah" },
-  { name: "Micah", slug: "micah" }, { name: "Nahum", slug: "nahum" },
-  { name: "Habakkuk", slug: "habakkuk" }, { name: "Zephaniah", slug: "zephaniah" },
-  { name: "Haggai", slug: "haggai" }, { name: "Zechariah", slug: "zechariah" },
-  { name: "Malachi", slug: "malachi" }, { name: "Matthew", slug: "matthew" },
-  { name: "Mark", slug: "mark" }, { name: "Luke", slug: "luke" },
-  { name: "John", slug: "john" }, { name: "Acts", slug: "acts" },
-  { name: "Romans", slug: "romans" }, { name: "1 Corinthians", slug: "1-corinthians" },
-  { name: "2 Corinthians", slug: "2-corinthians" }, { name: "Galatians", slug: "galatians" },
-  { name: "Ephesians", slug: "ephesians" }, { name: "Philippians", slug: "philippians" },
-  { name: "Colossians", slug: "colossians" }, { name: "1 Thessalonians", slug: "1-thessalonians" },
-  { name: "2 Thessalonians", slug: "2-thessalonians" }, { name: "1 Timothy", slug: "1-timothy" },
-  { name: "2 Timothy", slug: "2-timothy" }, { name: "Titus", slug: "titus" },
-  { name: "Philemon", slug: "philemon" }, { name: "Hebrews", slug: "hebrews" },
-  { name: "James", slug: "james" }, { name: "1 Peter", slug: "1-peter" },
-  { name: "2 Peter", slug: "2-peter" }, { name: "1 John", slug: "1-john" },
-  { name: "2 John", slug: "2-john" }, { name: "3 John", slug: "3-john" },
-  { name: "Jude", slug: "jude" }, { name: "Revelation", slug: "revelation" },
-];
-
-const TOPICS = [
-  "faith", "prayer", "salvation", "grace", "holy-spirit", "worship",
-  "repentance", "baptism", "heaven", "eternal-life", "gods-love",
-  "trust-in-god", "spiritual-growth", "love", "hope", "peace", "joy",
-  "patience", "courage", "strength", "comfort", "gratitude", "humility",
-  "wisdom", "kindness", "forgiveness", "compassion", "marriage", "family",
-  "children", "friendship", "leadership", "work", "money", "generosity",
-  "justice", "healing", "suffering", "death", "grief", "anxiety", "fear",
-  "anger", "capital-punishment", "gender-relations", "women-in-the-bible",
-  "genocide", "slavery", "war", "divorce", "homosexuality", "alcohol",
-  "wealth-and-poverty",
-];
 
 const urls = [];
 
@@ -78,11 +61,11 @@ for (const topic of TOPICS) {
   urls.push({ loc: `/topics/${topic}`, priority: "0.7", changefreq: "monthly" });
 }
 
-// Book pages
+// Book pages and chapter pages
 for (const book of BOOK_META) {
   urls.push({ loc: `/${book.slug}`, priority: "0.8", changefreq: "monthly" });
 
-  // Chapter pages
+  // Chapter pages — read from actual KJV data
   const chapters = kjvData[book.name];
   if (chapters) {
     for (const chapter of chapters) {
@@ -110,4 +93,4 @@ ${urls
 </urlset>`;
 
 writeFileSync(resolve(projectRoot, "public/sitemap.xml"), xml);
-console.log(`Sitemap generated: ${urls.length} URLs`);
+console.log(`Sitemap generated: ${urls.length} URLs (${BOOK_META.length} books, ${TOPICS.length} topics, ${urls.length - BOOK_META.length - TOPICS.length - 3} chapters)`);
