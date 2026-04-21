@@ -151,7 +151,7 @@ export function getChapter(bookSlug: string, chapterNum: number, translation: Tr
   const data = getData(translation);
   const chapters = data[name];
   if (!chapters) return null;
-  const chapter = chapters.find((c) => c.chapter === String(chapterNum));
+  const chapter = chapters.find((c) => String(c.chapter) === String(chapterNum));
   if (!chapter) return null;
   const meta = BOOK_META.find((b) => b.slug === bookSlug)!;
   return { book: meta, chapter, totalChapters: chapters.length };
@@ -160,7 +160,7 @@ export function getChapter(bookSlug: string, chapterNum: number, translation: Tr
 export function getVerse(bookSlug: string, chapterNum: number, verseNum: number, translation: Translation = "kjv"): string | null {
   const result = getChapter(bookSlug, chapterNum, translation);
   if (!result) return null;
-  const verse = result.chapter.verses.find((v) => v.verse === String(verseNum));
+  const verse = result.chapter.verses.find((v) => String(v.verse) === String(verseNum));
   return verse?.text ?? null;
 }
 
