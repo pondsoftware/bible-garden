@@ -12,7 +12,8 @@ interface ChapterContentProps {
 
 export default function ChapterContent({ kjvVerses, webVerses, bookName, chapterNum }: ChapterContentProps) {
   const [translation, setTranslation] = useState<Translation>("kjv");
-  const verses = translation === "kjv" ? kjvVerses : webVerses;
+  const verses = translation === "kjv" ? kjvVerses : (webVerses.length > 0 ? webVerses : kjvVerses);
+  const usingFallback = translation === "web" && webVerses.length === 0;
 
   return (
     <div>
@@ -41,6 +42,9 @@ export default function ChapterContent({ kjvVerses, webVerses, bookName, chapter
       <h1 className="text-3xl font-bold text-primary mb-8">
         {bookName} {chapterNum}
       </h1>
+      {usingFallback && (
+        <p className="text-sm text-text-muted italic mb-4">WEB translation not available for this chapter. Showing KJV.</p>
+      )}
 
       {/* Verse Text */}
       <div className="verse-text leading-relaxed mb-10">

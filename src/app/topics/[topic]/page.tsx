@@ -55,7 +55,7 @@ export default async function TopicPage({
       ...ref,
       slug,
       kjvText: kjvText || "",
-      webText: webText || "",
+      webText: webText || kjvText || "",
       reference: `${ref.book} ${ref.chapter}:${ref.verse}`,
     };
   });
