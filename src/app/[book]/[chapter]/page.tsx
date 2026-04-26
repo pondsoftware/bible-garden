@@ -26,11 +26,11 @@ export async function generateMetadata({
 
   const { book } = result;
   return {
-    title: `${book.name} Chapter ${chapterNum} — KJV & WEB Bible Text`,
-    description: `Read ${book.name} Chapter ${chapterNum} in the King James Version (KJV) and World English Bible (WEB). Full text with verse numbers.`,
+    title: `${book.name} ${chapterNum} — King James Version (KJV) Bible`,
+    description: `Read ${book.name} ${chapterNum} in the King James Version (KJV) and World English Bible (WEB), side by side. Full text with verse numbers.`,
     openGraph: {
-      title: `${book.name} Chapter ${chapterNum} — Bible Garden`,
-      description: `Read ${book.name} ${chapterNum} in KJV and WEB translations.`,
+      title: `${book.name} ${chapterNum} — King James Version (KJV) Bible`,
+      description: `Read ${book.name} ${chapterNum} KJV and WEB side by side. Full text with verse numbers.`,
     },
   };
 }
