@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     icon: "/favicon.svg",
   },
   title: {
-    default: "Bible Garden — Read, Search & Explore the KJV Bible Online",
+    default: "Bible Garden — Read, Search & Explore the KJV Bible",
     template: "%s — Bible Garden",
   },
   description:
